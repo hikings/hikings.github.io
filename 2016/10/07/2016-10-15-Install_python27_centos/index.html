@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   
-  <title>Parallelism | Life is like hiking</title>
+  <title>Install python27 on centos6 | Life is like hiking</title>
   <meta name="author" content="Kendall.j." />
 
   
-  <meta name="description" content="��ѧ�����ʡ���˼�����桢����" />
+  <meta name="description" content="python27" />
   
 
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  
+  <meta property="og:title" content="Install python27 on centos6" />
   <meta property="og:site_name" content="Life is like hiking" />
 
   
@@ -57,42 +57,102 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">Parallelism</h2>
-
-
-  
-    <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-05-21T13:27:36.000Z"><a href="/2016/05/21/2016-05-21-2s-walk-100k-files/">May 21 2016</a></time>
+        <time datetime="2016-10-07T14:01:33.000Z"><a href="/2016/10/07/2016-10-15-Install_python27_centos/">Oct 7 2016</a></time>
       
       
   
-    <h1 class="title"><a href="/2016/05/21/2016-05-21-2s-walk-100k-files/">使用并发在2s完成10G文件的校验</a></h1>
+    <h1 class="title">Install python27 on centos6</h1>
   
 
     </header>
     <div class="entry">
       
-        <ul>
-<li>AKKA使用了SBT，相比gradle更简洁，maven就不用来比较了。</li>
-<li>但是受网络的影响，从仓库下载akka和scale的库不是件容易的事情，前后折腾了几个小时</li>
-<li>构建的时候遇到个文件，明明jar文件存在，但是编译报错</li>
-<li><p>意识到jar文件可能没有下载完整</p>
-</li>
-<li><p>手工检查是不可能的</p>
+        <p>在工作环境中使用的是python 2.7.*，但是CentOS 6.4中默认使用的python版本是2.6.6，故需要升级版本。</p>
+<p>安装步骤如下：</p>
+<p>1,先安装GCC，用如下命令yum install gcc gcc-c++</p>
+<p>2,下载python-2.7.5.tar.gz文件，修改文件权限chmode +x python-7.5.tar.gz</p>
+<p>3,解压tar文件，tar -xzvf python-2.7.5.tar.gz</p>
+<p>4,cd python-2.7.5</p>
+<p>./configure –prefix=/usr/local/python27 ### 注意：安装在新目录，防止覆盖系统默认安装的python</p>
+<p>make &amp;&amp; make install</p>
+<p>5、建立软连接，使系统默认的python指向python27</p>
+<p>mv /usr/bin/python /usr/bin/python2.6.6.old</p>
+<p>ln -s /usr/local/bin/python27 /usr/bin/python</p>
+<p>已经安装完成python的安装或升级的全部操作了，我们再来看一下现在的python的版本：</p>
+<h1 id="python-V"><a href="#python-V" class="headerlink" title="python -V"></a>python -V</h1><p>Python 2.7.5</p>
+<p>虽然现在python已经安装完成，但是使用yum命令会有问题——yum不能正常工作：</p>
+<h1 id="yum-list"><a href="#yum-list" class="headerlink" title="yum list"></a>yum list</h1><p>There was a problem importing one of the Python modules</p>
+<p>required to run yum. The error leading to this problem was:</p>
+<p>No module named yum</p>
+<p>Please install a package which provides this module, or</p>
+<p>verify that the module is installed correctly.</p>
+<p>It’s possible that the above module doesn’t match the</p>
+<p>current version of Python</p>
+<p>这是因为yum默认使用的python版本是2.6.6，到哪是现在的python版本是2.7.5，故会出现上述问题，只需要该一下yum的默认python配置版本就行了：</p>
+<p>#vi /usr/bin/yum</p>
+<p>将文件头部的#!/usr/bin/python改为</p>
+<p>#!/usr/bin/python2.6</p>
+<p><a href="https://pypi.python.org/pypi/setuptools" target="_blank" rel="external">https://pypi.python.org/pypi/setuptools</a><br>wget <a href="https://bootstrap.pypa.io/ez_setup.py" target="_blank" rel="external">https://bootstrap.pypa.io/ez_setup.py</a> -O - | python</p>
+<a id="more"></a>
+<p>Centos 6.4 安装Python 2.7 python-pip</p>
+<ol>
+<li>准备工作</li>
+</ol>
+<p>下载源码包</p>
+<p>wget <a href="http://python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2" target="_blank" rel="external">http://python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2</a><br>查看是否安装make工具</p>
+<p>~#rpm -qa|grep make<br>automake-1.11.1-4.el6.noarch<br>make-3.81-20.el6.x86_64<br>如果没有安装make工具</p>
+<p>yum -y install gcc automake autoconf libtool make<br>查看是否安装zlib库</p>
+<p>~#rpm -qa|grep zlib<br>zlib-devel-1.2.3-29.el6.x86_64<br>zlib-1.2.3-29.el6.x86_64<br>安装zlib</p>
+<p>yum install zlib-devel<br>检查是否安装ssl 库</p>
+<p>复制代码<br>~#rpm -qa|grep openssl<br>openssl-devel-1.0.1e-16.el6_5.x86_64<br>openssl-static-1.0.1e-16.el6_5.x86_64<br>openssl098e-0.9.8e-17.el6.centos.2.x86_64<br>openssl-1.0.1e-16.el6_5.x86_64<br>openssl-perl-1.0.1e-16.el6_5.x86_64<br>复制代码<br>安装openssl</p>
+<p>yum install openssl*<br>安装bzip2依赖库</p>
+<p>yum install -y bzip2*</p>
+<ol>
+<li>编译安装</li>
+</ol>
+<p>cp Python-2.7.3.tar.bz2 /usr/src/<br>tar -jxvf Python-2.7.3.tar.bz2<br>vi Modules/Setup.dist<br> 找到   </p>
+<p>复制代码</p>
+<p>#SSL=/usr/local/ssl</p>
+<p>#_ssl _ssl.c \</p>
+<h1 id="DUSE-SSL-I-SSL-include-I-SSL-include-openssl"><a href="#DUSE-SSL-I-SSL-include-I-SSL-include-openssl" class="headerlink" title="-DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \"></a>-DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \</h1><h1 id="L-SSL-lib-lssl-lcrypto"><a href="#L-SSL-lib-lssl-lcrypto" class="headerlink" title="-L$(SSL)/lib -lssl -lcrypto"></a>-L$(SSL)/lib -lssl -lcrypto</h1><p>……</p>
+<p>#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz<br>复制代码<br> 把注释去掉</p>
+<p> 编译</p>
+<p>./configure –prefix=/usr/local/python2.7<br>make all<br>make install<br>make clean<br>make distclean<br> 安装成功</p>
+<p>~#/usr/local/python2.7/bin/python2.7<br>Python 2.7.3 (default, Dec 18 2013, 15:43:35)<br>[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2<br>Type “help”, “copyright”, “credits” or “license” for more information.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>cd /usr/local/python2.7<br>python setup.py install<br>建立python2.7 软链</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>~#mv /usr/bin/python /usr/bin/python.bak<br>~#ln -s /usr/local/python2.7/bin/python2.7 /usr/bin/python2.7<br>~#ln -s /usr/bin/python2.7 /usr/bin/python</p>
+<ol>
+<li>解决yum无法使用的问题</li>
+</ol>
+<p>复制代码<br>~#yum update<br>There was a problem importing one of the Python modules<br>required to run yum. The error leading to this problem was:</p>
+<p>   No module named yum</p>
+<p>Please install a package which provides this module, or<br>verify that the module is installed correctly.</p>
+<p>It’s possible that the above module doesn’t match the<br>current version of Python, which is:<br>2.7.3 (default, Dec 18 2013, 15:43:35)<br>[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]</p>
+<p>If you cannot solve this problem yourself, please go to<br>the yum faq at:<br>  <a href="http://yum.baseurl.org/wiki/Faq" target="_blank" rel="external">http://yum.baseurl.org/wiki/Faq</a><br>复制代码<br>因为centos 6.4 下yum默认使用的是python2.6</p>
+<p>复制代码</p>
+<h2 id="vi-usr-bin-yum"><a href="#vi-usr-bin-yum" class="headerlink" title="vi /usr/bin/yum"></a>vi /usr/bin/yum</h2><p>#!/usr/bin/python<br>import sys<br>try:<br>    import yum<br>except ImportError:<br>…….<br>复制代码<br>修改为</p>
+<p>#!/usr/bin/python2.6<br>……..</p>
+<ol>
+<li>安装python-pip工具</li>
+</ol>
+<p>先安装setup-tools</p>
+<p>wget <a href="https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg" target="_blank" rel="external">https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg</a>  –no-check-certificate<br>chmod +x setuptools-0.6c11-py2.7.egg<br>sh setuptools-0.6c11-py2.7.egg<br>安装pip</p>
+<p>复制代码<br>wget <a href="https://pypi.python.org/packages/source/p/pip/pip-1.3.1.tar.gz" target="_blank" rel="external">https://pypi.python.org/packages/source/p/pip/pip-1.3.1.tar.gz</a> –no-check-certificate<br>cp pip-1.3.1.tar.gz /usr/src/<br>tar zxvf pip-1.3.1.tar.gz<br>cd pip-1.3.1<br>python setup.py install<br>ln -s /usr/local/python2.7/bin/pip /usr/bin/pip<br>复制代码</p>
+
       
     </div>
-    
-    <footer>
-      <div class="alignleft">
-        <a href="/2016/05/21/2016-05-21-2s-walk-100k-files/#more" class="more-link">更多内容</a>
-      </div>
-    </footer>
     
     <footer>
         <div class="alignright">
@@ -102,13 +162,13 @@
         
   
   <div class="categories">
-    <a href="/categories/Go/">Go</a>
+    <a href="/categories/MachineLearning/">MachineLearning</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/GoLang/">GoLang</a>, <a href="/tags/Concurrent/">Concurrent</a>, <a href="/tags/Parallelism/">Parallelism</a>, <a href="/tags/NIO/">NIO</a>
+    <a href="/tags/Python/">Python</a>, <a href="/tags/Centos/">Centos</a>
   </div>
 
         <!-- partial('post/share') -->
@@ -118,74 +178,6 @@
 </article>
 
 
-
-
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-05-07T15:19:32.000Z"><a href="/2016/05/07/2016-05-07-concurrent-and-parallelism/">May 7 2016</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/05/07/2016-05-07-concurrent-and-parallelism/">并发编程的春天</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <ul>
-<li>在过去的30年里，计算机的性能是在摩尔定律的推动下，从现在开始，这将由Amdahl’s Law决定。编写代码，有效地利用多个处理器可以是非常具有挑战性的。” -Doron Rajwan　　</li>
-<li><p>Amdahl’s Law：每个程序都分为串行与并行部分，降低串行的比重，可提高程序的效率。</p>
-</li>
-<li><p>现在系统面临下面的挑战：</p>
-<ul>
-<li>单节点上如何充分的利用多核</li>
-<li>云化或分布式网络化环境下越来越复杂的编程问题</li>
-<li>负责的部署和一致性检测难度
-      
-    </div>
-    
-    <footer>
-      <div class="alignleft">
-        <a href="/2016/05/07/2016-05-07-concurrent-and-parallelism/#more" class="more-link">更多内容</a>
-      </div>
-    </footer>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-  
-  <div class="categories">
-    <a href="/categories/Concurrent-Parallelism/">Concurrent & Parallelism</a>
-  </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/Concurrent/">Concurrent</a>, <a href="/tags/Parallelism/">Parallelism</a>
-  </div>
-
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  
-
-  <nav id="pagination">
-  
-</nav>
 
 </div></div>
     <aside id="sidebar" class="alignright">

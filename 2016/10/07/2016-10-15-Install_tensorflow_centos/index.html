@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   
-  <title>Parallelism | Life is like hiking</title>
+  <title>Install tensorflow on centos | Life is like hiking</title>
   <meta name="author" content="Kendall.j." />
 
   
-  <meta name="description" content="��ѧ�����ʡ���˼�����桢����" />
+  <meta name="description" content="tensorflow" />
   
 
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  
+  <meta property="og:title" content="Install tensorflow on centos" />
   <meta property="og:site_name" content="Life is like hiking" />
 
   
@@ -57,42 +57,44 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">Parallelism</h2>
-
-
-  
-    <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-05-21T13:27:36.000Z"><a href="/2016/05/21/2016-05-21-2s-walk-100k-files/">May 21 2016</a></time>
+        <time datetime="2016-10-07T04:01:33.000Z"><a href="/2016/10/07/2016-10-15-Install_tensorflow_centos/">Oct 7 2016</a></time>
       
       
   
-    <h1 class="title"><a href="/2016/05/21/2016-05-21-2s-walk-100k-files/">使用并发在2s完成10G文件的校验</a></h1>
+    <h1 class="title">Install tensorflow on centos</h1>
   
 
     </header>
     <div class="entry">
       
-        <ul>
-<li>AKKA使用了SBT，相比gradle更简洁，maven就不用来比较了。</li>
-<li>但是受网络的影响，从仓库下载akka和scale的库不是件容易的事情，前后折腾了几个小时</li>
-<li>构建的时候遇到个文件，明明jar文件存在，但是编译报错</li>
-<li><p>意识到jar文件可能没有下载完整</p>
-</li>
-<li><p>手工检查是不可能的</p>
+        <p>[root@localhost ~]# pip list<br>Cython (0.24.1)<br>funcsigs (1.0.2)<br>mock (2.0.0)<br>numpy (1.11.2)<br>pandas (0.19.0)<br>pbr (1.10.0)<br>pip (8.1.2)<br>protobuf (3.0.0)<br>python-dateutil (2.5.3)<br>pytz (2016.7)<br>setuptools (28.4.0)<br>six (1.10.0)<br>tensorflow (0.11.0rc0)<br>wheel (0.29.0)<br>[root@localhost ~]# ls        </p>
+<a id="more"></a>
+<p><a href="https://www.tensorflow.org/versions/r0.11/get_started/os_setup.html" target="_blank" rel="external">https://www.tensorflow.org/versions/r0.11/get_started/os_setup.html</a></p>
+<h1 id="Ubuntu-Linux-64-bit-CPU-only-Python-2-7"><a href="#Ubuntu-Linux-64-bit-CPU-only-Python-2-7" class="headerlink" title="Ubuntu/Linux 64-bit, CPU only, Python 2.7"></a>Ubuntu/Linux 64-bit, CPU only, Python 2.7</h1><p>pip install –upgrade <a href="https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp27-none-linux_x86_64.whl" target="_blank" rel="external">https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp27-none-linux_x86_64.whl</a></p>
+<p>Successfully installed setuptools-28.5.0 tensorflow-0.11.0rc0</p>
+<p>[root@localhost part2]# python wide.py<br>Traceback (most recent call last):<br>  File “wide.py”, line 2, in <module><br>    import tensorflow as tf<br>  File “/usr/local/python2.7/lib/python2.7/site-packages/tensorflow/<strong>init</strong>.py”, line 23, in <module><br>    from tensorflow.python import *<br>  File “/usr/local/python2.7/lib/python2.7/site-packages/tensorflow/python/<strong>init</strong>.py”, line 49, in <module><br>    from tensorflow.python import pywrap_tensorflow<br>  File “/usr/local/python2.7/lib/python2.7/site-packages/tensorflow/python/pywrap_tensorflow.py”, line 28, in <module><br>    _pywrap_tensorflow = swig_import_helper()<br>  File “/usr/local/python2.7/lib/python2.7/site-packages/tensorflow/python/pywrap_tensorflow.py”, line 24, in swig_import_helper<br>    _mod = imp.load_module(‘_pywrap_tensorflow’, fp, pathname, description)<br>ImportError: /lib64/libc.so.6: version <code>GLIBC_2.14&#39; not found (required by /usr/local/python2.7/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow.so)
+1.试图运行程序，提示&quot;libc.so.6: version</code>GLIBC_2.14’ not found”,原因是系统的glibc版本太低，软件编译时使用了较高版本的glibc引起的：</module></module></module></module></p>
+<p>2.查看系统glibc支持的版本：<br>[cpp] view plain copy<br>[ghui@StuOS bin]$ strings /lib64/libc.so.6 |grep GLIBC_<br>GLIBC_2.2.5<br>GLIBC_2.2.6<br>GLIBC_2.3<br>GLIBC_2.3.2<br>GLIBC_2.3.3<br>GLIBC_2.3.4<br>GLIBC_2.4<br>GLIBC_2.5<br>GLIBC_2.6<br>GLIBC_2.7<br>GLIBC_2.8<br>GLIBC_2.9<br>GLIBC_2.10<br>GLIBC_2.11<br>GLIBC_2.12<br>GLIBC_PRIVATE </p>
+<p>[root@localhost part2]# rpm -qa |grep glibc<br>glibc-2.12-1.192.el6.i686<br>glibc-2.12-1.192.el6.x86_64<br>vzdummy-glibc-2.12-1.7.el6.noarch<br>glibc-devel-2.12-1.192.el6.x86_64<br>glibc-common-2.12-1.192.el6.x86_64<br>glibc-headers-2.12-1.192.el6.x86_64</p>
+<p>3.可以看到最高只支持2.12版本，所以考虑编译解决这个问题：<br>       a. 到<a href="http://www.gnu.org/software/libc/下载最新版本，我这里下载了glibc-2.14.tar.xz" target="_blank" rel="external">http://www.gnu.org/software/libc/下载最新版本，我这里下载了glibc-2.14.tar.xz</a> 这个版本，解压到任意目录准备编译<br>       b.这里解压到/var/VMdisks/glibc-2.14/</p>
+<p>c.在glibc源码目录建立构建目录，并cd进入构建目录<br>[cpp] view plain copy<br>[ghui@StuOS glibc-2.14]$ mkdir build<br>[cpp] view plain copy<br>[ghui@StuOS glibc-2.14]$ cd build  </p>
+<pre><code>d.运行configure配置，make &amp;&amp; sudo  make install
+</code></pre><p>[cpp] view plain copy<br>[ghui@StuOS build]$ ../configure –prefix=/opt/glibc-2.14<br>[ghui@StuOS build]$ make -j4<br>[ghui@StuOS build]$ sudo make install<br>[sudo] password for ghui:   </p>
+<p>4.临时修改环境变量<br>[cpp] view plain copy<br>[ghui@StuOS bin]$ export LD_LIBRARY_PATH=/opt/glibc-2.14/lib:$LD_LIBRARY_PATH  </p>
+<p>在CentOS 6环境下升级Android SDK的platform-tools版本到最新的23时，报/lib64/libc.so.6: version `GLIBC_2.14’ not found错误，升级glibc2.14出现glibc-2.14/etc/ld.so.conf: No such file or directory错误，使用命令touch /glibc-2.14/etc/ld.so.conf不再报错，但查看glibc安装版本还是不对，系统的glibc版本始终是glibc-2.12，也就是依然没有安装进去，使用export LD_LIBRARY_PATH=/opt/glibc-2.14/lib:$LD_LIBRARY_PATH修改过临时变量，都不能解决<br>cp -r /etc/ld.so.c* /opt/glibc-2.14/etc/<br>ln -sf /opt/glibc-2.14/lib/libc-2.14.so /lib64/libc.so.6       </p>
+<p>You cannot update glibc on Centos 6 safely. However you can install 2.14 alongside 2.12 easily, then use it to compile projects etc. Here is how:</p>
+<p>mkdir ~/glibc_install; cd ~/glibc_install<br>wget <a href="http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz" target="_blank" rel="external">http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz</a><br>tar zxvf glibc-2.14.tar.gz<br>cd glibc-2.14<br>mkdir build<br>cd build<br>../configure –prefix=/opt/glibc-2.14<br>make &amp;&amp; make install<br>export LD_LIBRARY_PATH=/opt/glibc-2.14/lib</p>
+<p>cd glibc-2.17<br>mkdir build<br>cd build<br>../configure –prefix=/opt/glibc-2.17<br>make &amp;&amp; make install<br>export LD_LIBRARY_PATH=/opt/glibc-2.17/lib</p>
+<p>diJHMKULUQKY</p>
+
       
     </div>
-    
-    <footer>
-      <div class="alignleft">
-        <a href="/2016/05/21/2016-05-21-2s-walk-100k-files/#more" class="more-link">更多内容</a>
-      </div>
-    </footer>
     
     <footer>
         <div class="alignright">
@@ -102,13 +104,13 @@
         
   
   <div class="categories">
-    <a href="/categories/Go/">Go</a>
+    <a href="/categories/MachineLearning/">MachineLearning</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/GoLang/">GoLang</a>, <a href="/tags/Concurrent/">Concurrent</a>, <a href="/tags/Parallelism/">Parallelism</a>, <a href="/tags/NIO/">NIO</a>
+    <a href="/tags/Centos/">Centos</a>, <a href="/tags/MachineLearning/">MachineLearning</a>, <a href="/tags/Tensorflow/">Tensorflow</a>
   </div>
 
         <!-- partial('post/share') -->
@@ -118,74 +120,6 @@
 </article>
 
 
-
-
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-05-07T15:19:32.000Z"><a href="/2016/05/07/2016-05-07-concurrent-and-parallelism/">May 7 2016</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/05/07/2016-05-07-concurrent-and-parallelism/">并发编程的春天</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <ul>
-<li>在过去的30年里，计算机的性能是在摩尔定律的推动下，从现在开始，这将由Amdahl’s Law决定。编写代码，有效地利用多个处理器可以是非常具有挑战性的。” -Doron Rajwan　　</li>
-<li><p>Amdahl’s Law：每个程序都分为串行与并行部分，降低串行的比重，可提高程序的效率。</p>
-</li>
-<li><p>现在系统面临下面的挑战：</p>
-<ul>
-<li>单节点上如何充分的利用多核</li>
-<li>云化或分布式网络化环境下越来越复杂的编程问题</li>
-<li>负责的部署和一致性检测难度
-      
-    </div>
-    
-    <footer>
-      <div class="alignleft">
-        <a href="/2016/05/07/2016-05-07-concurrent-and-parallelism/#more" class="more-link">更多内容</a>
-      </div>
-    </footer>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-  
-  <div class="categories">
-    <a href="/categories/Concurrent-Parallelism/">Concurrent & Parallelism</a>
-  </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/Concurrent/">Concurrent</a>, <a href="/tags/Parallelism/">Parallelism</a>
-  </div>
-
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  
-
-  <nav id="pagination">
-  
-</nav>
 
 </div></div>
     <aside id="sidebar" class="alignright">
