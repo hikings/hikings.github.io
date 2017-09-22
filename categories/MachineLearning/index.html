@@ -68,6 +68,72 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-09-22T04:01:33.000Z"><a href="/2017/09/22/2017-09-22-netflix-open-source/">Sep 22 2017</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/09/22/2017-09-22-netflix-open-source/">Netflix 开源项目推荐</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <!-- TOC -->
+<ul>
+<li><a href="#联合作业执行引擎-netflix-genie">联合作业执行引擎 Netflix Genie</a></li>
+<li><a href="#持续交付平台-spinnaker">持续交付平台 Spinnaker</a></li>
+<li><a href="#云操作容错解决方案-simianarmy">云操作容错解决方案 SimianArmy</a></li>
+<li><a href="#分布式系统的延迟和容错库-hystrix">分布式系统的延迟和容错库 Hystrix</a></li>
+<li><a href="#数据管道服务-suro">数据管道服务 Suro</a></li>
+<li><a href="#分布式内存数据云存储-evcache">分布式内存数据云存储 EVCache</a></li>
+<li><a href="#云端负载均衡工具-eureka">云端负载均衡工具 Eureka</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="联合作业执行引擎-Netflix-Genie"><a href="#联合作业执行引擎-Netflix-Genie" class="headerlink" title="联合作业执行引擎 Netflix Genie"></a>联合作业执行引擎 Netflix Genie</h2><p><a href="https://www.oschina.net/p/netflix-genie" target="_blank" rel="external">https://www.oschina.net/p/netflix-genie</a><br>Genie 是 Netflix 联合作业执行引擎，提供 REST-ful APIs，运行各种类型的大数据作业，比如 Hadoop，Pig，Hive，Spark，Presto，Sqoop 等等。Genie 同时提供 APis 来管理在上面运行的大量的分布式进程集群配置，命令和应用。</p>
+<p>基于 Java 的 Mesos 调度器 Fenzo<br><a href="https://www.oschina.net/p/fenzo" target="_blank" rel="external">https://www.oschina.net/p/fenzo</a><br>Fenzo 是一个使用 Java 语言编写的 Apache Mesos 框架的可扩展调度器。Fenzo 负责管理 Netflix 内部所有服务的调度和资源分配。<br>Fenzo 支持使用两种互补的策略集群自动缩放：<br>  ● 基于阈值<br>  ● 基于资源短缺分析</p>
+<h2 id="持续交付平台-Spinnaker"><a href="#持续交付平台-Spinnaker" class="headerlink" title="持续交付平台 Spinnaker"></a>持续交付平台 Spinnaker</h2><p><a href="https://www.oschina.net/p/spinnaker" target="_blank" rel="external">https://www.oschina.net/p/spinnaker</a><br>Spinnaker 是一个持续交付平台，它定位于将产品快速且持续的部署到多种云平台上。<br>Spinnaker 主要特性：配置一次，随时运行；随地部署，集中化管理；开源。<br>Spinnaker 组件：</p>
+<h2 id="云操作容错解决方案-SimianArmy"><a href="#云操作容错解决方案-SimianArmy" class="headerlink" title="云操作容错解决方案 SimianArmy"></a>云操作容错解决方案 SimianArmy</h2><p><a href="https://www.oschina.net/p/simianarmy" target="_blank" rel="external">https://www.oschina.net/p/simianarmy</a><br>SimianArmy 让你的云操作保持最佳状态的工具。Chaos Monkey 是伸缩性很强的工具，是 SimianArmy 的第一个成员，能帮助应用更好的容忍随机故障实例。<br>Simian Army 是 Netflix 实例的随机故障测试，用于验证可靠性。</p>
+<h2 id="分布式系统的延迟和容错库-Hystrix"><a href="#分布式系统的延迟和容错库-Hystrix" class="headerlink" title="分布式系统的延迟和容错库 Hystrix"></a>分布式系统的延迟和容错库 Hystrix</h2><p><a href="https://www.oschina.net/p/hystrix" target="_blank" rel="external">https://www.oschina.net/p/hystrix</a><br>Netflix（一家在线影片租赁商）近日开源了其Hystrix库，这是一个针对分布式系统的延迟和容错库。<br>Hystrix 供分布式系统使用，提供延迟和容错功能，隔离远程系统、访问和第三方程序库的访问点，防止级联失败，保证复杂的分布系统在面临不可避免的失败时，仍能有其弹性。</p>
+<h2 id="数据管道服务-Suro"><a href="#数据管道服务-Suro" class="headerlink" title="数据管道服务 Suro"></a>数据管道服务 Suro</h2><p><a href="https://www.oschina.net/p/suro" target="_blank" rel="external">https://www.oschina.net/p/suro</a><br>Netflix 开源了一个叫做Suro的工具，它能够在数据被发送到不同的数据平台（如Hadoop、Elasticsearch）之前，收集不同应用服务器上的事件数据，这项创新技术具备成为大数据主流实践的潜力<br>Suro 是数据管道服务，用来收集，聚合和调度大数据应用事件，包括日志记录数据。</p>
+<h2 id="分布式内存数据云存储-EVCache"><a href="#分布式内存数据云存储-EVCache" class="headerlink" title="分布式内存数据云存储 EVCache"></a>分布式内存数据云存储 EVCache</h2><p><a href="https://www.oschina.net/p/evcache" target="_blank" rel="external">https://www.oschina.net/p/evcache</a><br>EVCache 是基于 memcached &amp; spymemcached 的缓存解决方案，主要用在 AWS EC2 基础设施上，为了顺畅的使用数据而开发的缓存解决方案。<br>EVCache 是一个缩写的单词，包含：<br>  ● Ephemeral  - 数据存储是短暂的，有自身的 TTL (Time To Live).<br>  ● Volatile  - 数据可以在任何时候消失<br>  ● Cache - 一个内存键值存储</p>
+<h2 id="云端负载均衡工具-Eureka"><a href="#云端负载均衡工具-Eureka" class="headerlink" title="云端负载均衡工具 Eureka"></a>云端负载均衡工具 Eureka</h2><p><a href="https://www.oschina.net/p/eureka" target="_blank" rel="external">https://www.oschina.net/p/eureka</a><br>Netflix 填补了Amazon Web Services的大缺口，发布了云端负载均衡工具Eureka。<br>Netflix通过开源工具让亚马逊的服务变得更可靠。亚马逊提供了一个负载均衡工具Elastic Load Balancer，但针对的是终端用户Web流量服务器，而Eureka针对的是中间层服务器的负载均衡。</p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+  
+  <div class="categories">
+    <a href="/categories/MachineLearning/">MachineLearning</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/netflix/">netflix</a>, <a href="/tags/opensource/">opensource</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2016-10-07T14:01:33.000Z"><a href="/2016/10/07/2016-10-15-Install_python27_centos/">Oct 7 2016</a></time>
       
       
@@ -222,7 +288,7 @@
   
     <li><a href="/categories/IDE/">IDE</a><small>1</small></li>
   
-    <li><a href="/categories/MachineLearning/">MachineLearning</a><small>2</small></li>
+    <li><a href="/categories/MachineLearning/">MachineLearning</a><small>3</small></li>
   
     <li><a href="/categories/Package-Management/">Package-Management</a><small>1</small></li>
   
@@ -240,6 +306,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2017/09/22/2017-09-22-netflix-open-source/">Netflix 开源项目推荐</a>
+      </li>
+    
+      <li>
         <a href="/2016/10/07/2016-10-15-Install_python27_centos/">Install python27 on centos6</a>
       </li>
     
@@ -253,10 +323,6 @@
     
       <li>
         <a href="/2016/05/21/2016-05-21-2s-walk-100k-files/">使用并发在2s完成10G文件的校验</a>
-      </li>
-    
-      <li>
-        <a href="/2016/05/15/2016-05-15-a-sample-crwal-by-go/">Go实现的简单爬虫</a>
       </li>
     
   </ul>
@@ -302,7 +368,11 @@
   
     <li><a href="/tags/Tensorflow/">Tensorflow</a><small>1</small></li>
   
+    <li><a href="/tags/netflix/">netflix</a><small>1</small></li>
+  
     <li><a href="/tags/note/">note</a><small>1</small></li>
+  
+    <li><a href="/tags/opensource/">opensource</a><small>1</small></li>
   
   </ul>
 </div>
@@ -312,7 +382,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/AI/" style="font-size: 13.33px;">AI</a> <a href="/tags/Centos/" style="font-size: 13.33px;">Centos</a> <a href="/tags/Concurrent/" style="font-size: 13.33px;">Concurrent</a> <a href="/tags/Containers/" style="font-size: 10px;">Containers</a> <a href="/tags/Crawler/" style="font-size: 10px;">Crawler</a> <a href="/tags/DS/" style="font-size: 16.67px;">DS</a> <a href="/tags/Deployment-Management/" style="font-size: 10px;">Deployment-Management</a> <a href="/tags/GoLang/" style="font-size: 20px;">GoLang</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/MachineLearning/" style="font-size: 10px;">MachineLearning</a> <a href="/tags/NIO/" style="font-size: 10px;">NIO</a> <a href="/tags/PAPER/" style="font-size: 16.67px;">PAPER</a> <a href="/tags/Package-Management/" style="font-size: 10px;">Package-Management</a> <a href="/tags/Parallelism/" style="font-size: 13.33px;">Parallelism</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Static-Website/" style="font-size: 13.33px;">Static-Website</a> <a href="/tags/Tensorflow/" style="font-size: 10px;">Tensorflow</a> <a href="/tags/note/" style="font-size: 10px;">note</a>
+    <a href="/tags/AI/" style="font-size: 13.33px;">AI</a> <a href="/tags/Centos/" style="font-size: 13.33px;">Centos</a> <a href="/tags/Concurrent/" style="font-size: 13.33px;">Concurrent</a> <a href="/tags/Containers/" style="font-size: 10px;">Containers</a> <a href="/tags/Crawler/" style="font-size: 10px;">Crawler</a> <a href="/tags/DS/" style="font-size: 16.67px;">DS</a> <a href="/tags/Deployment-Management/" style="font-size: 10px;">Deployment-Management</a> <a href="/tags/GoLang/" style="font-size: 20px;">GoLang</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/MachineLearning/" style="font-size: 10px;">MachineLearning</a> <a href="/tags/NIO/" style="font-size: 10px;">NIO</a> <a href="/tags/PAPER/" style="font-size: 16.67px;">PAPER</a> <a href="/tags/Package-Management/" style="font-size: 10px;">Package-Management</a> <a href="/tags/Parallelism/" style="font-size: 13.33px;">Parallelism</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Static-Website/" style="font-size: 13.33px;">Static-Website</a> <a href="/tags/Tensorflow/" style="font-size: 10px;">Tensorflow</a> <a href="/tags/netflix/" style="font-size: 10px;">netflix</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/opensource/" style="font-size: 10px;">opensource</a>
   </div>
 </div>
 
@@ -322,7 +392,7 @@
   <footer id="footer" class="inner"><div class="alignleft">
   <p>
   
-  &copy; 2016 Kendall.j.
+  &copy; 2017 Kendall.j.
   
   All rights reserved.</p>
   <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
