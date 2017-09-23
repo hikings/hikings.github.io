@@ -1,79 +1,181 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  
-  <title>Install tensorflow on centos | Life is like hiking</title>
-  <meta name="author" content="Kendall.j." />
+    
 
-  
-  <meta name="description" content="tensorflow" />
-  
+    
 
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-  <meta property="og:title" content="Install tensorflow on centos" />
-  <meta property="og:site_name" content="Life is like hiking" />
-
-  
-  
-
-  
-    <meta property="og:image" content="undefined" />
-  
-
-  
-  <link href="/css/images/favicon.ico" rel="icon" />
-  
-
-  <link rel="alternate" href="/atom.xml" title="Life is like hiking" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+    
 
 
-  <!-- baidu webmaster push -->
-  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Install tensorflow on centos | Life is like hiking | Keep It Simple,Stupid!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Centos,MachineLearning,Tensorflow">
+    <meta name="description" content="tensorflow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Install tensorflow on centos">
+<meta property="og:url" content="http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/index.html">
+<meta property="og:site_name" content="Life is like hiking">
+<meta property="og:description" content="tensorflow">
+<meta property="og:updated_time" content="2016-10-15T15:45:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Install tensorflow on centos">
+<meta name="twitter:description" content="tensorflow">
+    
+        <link rel="alternate" type="application/atom+xml" title="Life is like hiking" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
 
 </head>
 
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Life is like hiking</a></h1>
-  <h2><a href="/">Keep It Simple,Stupid!</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-10-07T04:01:33.000Z"><a href="/2016/10/07/2016-10-15-Install_tensorflow_centos/">Oct 7 2016</a></time>
-      
-      
-  
-    <h1 class="title">Install tensorflow on centos</h1>
-  
+    <div id="loading" class="active"></div>
 
-    </header>
-    <div class="entry">
-      
-        <p>[root@localhost ~]# pip list<br>Cython (0.24.1)<br>funcsigs (1.0.2)<br>mock (2.0.0)<br>numpy (1.11.2)<br>pandas (0.19.0)<br>pbr (1.10.0)<br>pip (8.1.2)<br>protobuf (3.0.0)<br>python-dateutil (2.5.3)<br>pytz (2016.7)<br>setuptools (28.4.0)<br>six (1.10.0)<br>tensorflow (0.11.0rc0)<br>wheel (0.29.0)<br>[root@localhost ~]# ls        </p>
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Kendall.j.</h5>
+          <a href="mailto:kendall.j@foxmail.com" title="kendall.j@foxmail.com" class="mail">kendall.j@foxmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Install tensorflow on centos</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Install tensorflow on centos</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-10-07T04:01:33.000Z" itemprop="datePublished" class="page-time">
+  10月 7 2016
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/MachineLearning/">MachineLearning</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Ubuntu-Linux-64-bit-CPU-only-Python-2-7"><span class="post-toc-text">Ubuntu/Linux 64-bit, CPU only, Python 2.7</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-2016-10-15-Install_tensorflow_centos"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Install tensorflow on centos</h1>
+        <div class="post-meta">
+            <time class="post-time" title="10月 7 2016 12:01:33" datetime="2016-10-07T04:01:33.000Z"  itemprop="datePublished">10月 7 2016</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/MachineLearning/">MachineLearning</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>[root@localhost ~]# pip list<br>Cython (0.24.1)<br>funcsigs (1.0.2)<br>mock (2.0.0)<br>numpy (1.11.2)<br>pandas (0.19.0)<br>pbr (1.10.0)<br>pip (8.1.2)<br>protobuf (3.0.0)<br>python-dateutil (2.5.3)<br>pytz (2016.7)<br>setuptools (28.4.0)<br>six (1.10.0)<br>tensorflow (0.11.0rc0)<br>wheel (0.29.0)<br>[root@localhost ~]# ls        </p>
 <a id="more"></a>
 <p><a href="https://www.tensorflow.org/versions/r0.11/get_started/os_setup.html" target="_blank" rel="external">https://www.tensorflow.org/versions/r0.11/get_started/os_setup.html</a></p>
 <h1 id="Ubuntu-Linux-64-bit-CPU-only-Python-2-7"><a href="#Ubuntu-Linux-64-bit-CPU-only-Python-2-7" class="headerlink" title="Ubuntu/Linux 64-bit, CPU only, Python 2.7"></a>Ubuntu/Linux 64-bit, CPU only, Python 2.7</h1><p>pip install –upgrade <a href="https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp27-none-linux_x86_64.whl" target="_blank" rel="external">https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp27-none-linux_x86_64.whl</a></p>
@@ -93,183 +195,263 @@
 <p>cd glibc-2.17<br>mkdir build<br>cd build<br>../configure –prefix=/opt/glibc-2.17<br>make &amp;&amp; make install<br>export LD_LIBRARY_PATH=/opt/glibc-2.17/lib</p>
 <p>diJHMKULUQKY</p>
 
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
         </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
         
-  
-  <div class="categories">
-    <a href="/categories/MachineLearning/">MachineLearning</a>
-  </div>
+<span class="post-time">
+    最后更新时间：<time datetime="2016-10-15T15:45:37.000Z" itemprop="dateUpdated">10月 15 2016 23:45:37</time>
+</span><br>
+
 
         
-  
-  <div class="tags">
-    <a href="/tags/Centos/">Centos</a>, <a href="/tags/MachineLearning/">MachineLearning</a>, <a href="/tags/Tensorflow/">Tensorflow</a>
-  </div>
-
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
+    </div>
+    <footer>
+        <a href="http://hikings.github.io">
+            <img src="/img/avatar.jpg" alt="Kendall.j.">
+            Kendall.j.
+        </a>
     </footer>
-  </div>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos/">Centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MachineLearning/">MachineLearning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tensorflow/">Tensorflow</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/&title=《Install tensorflow on centos》 — Life is like hiking&pic=http://hikings.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/&title=《Install tensorflow on centos》 — Life is like hiking&source=[root@localhost ~]# pip listCython (0.24.1)funcsigs (1.0.2)mock (2.0.0)numpy ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Install tensorflow on centos》 — Life is like hiking&url=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/&via=http://hikings.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/10/07/2016-10-07-borg_omega_and_kubernetes/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">谷歌论文 Borg、Omega and Kubernetes</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/05/21/2016-05-21-2s-walk-100k-files/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">使用并发在2s完成10G文件的校验</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
 </article>
 
 
 
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:hikings.github.io">
-  </form>
 </div>
 
-  
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/AI/">AI</a><small>2</small></li>
-  
-    <li><a href="/categories/Concurrent-Parallelism/">Concurrent &amp; Parallelism</a><small>1</small></li>
-  
-    <li><a href="/categories/Distributed-Computer-Systems/">Distributed-Computer-Systems</a><small>3</small></li>
-  
-    <li><a href="/categories/Go/">Go</a><small>2</small></li>
-  
-    <li><a href="/categories/IDE/">IDE</a><small>1</small></li>
-  
-    <li><a href="/categories/MachineLearning/">MachineLearning</a><small>3</small></li>
-  
-    <li><a href="/categories/Package-Management/">Package-Management</a><small>1</small></li>
-  
-    <li><a href="/categories/Static-Website/">Static-Website</a><small>2</small></li>
-  
-    <li><a href="/categories/note/">note</a><small>1</small></li>
-  
-  </ul>
-</div>
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
 
 
-  
-<div class="widget tag">
-  <h3 class="title">最新文章</h3>
-  <ul class="entry">
-    
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Kendall.j. &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
       <li>
-        <a href="/2017/09/22/2017-09-22-netflix-open-source/">Netflix 开源项目推荐</a>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/&title=《Install tensorflow on centos》 — Life is like hiking&pic=http://hikings.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/10/07/2016-10-15-Install_python27_centos/">Install python27 on centos6</a>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/10/07/2016-10-07-borg_omega_and_kubernetes/">谷歌论文 Borg、Omega and Kubernetes</a>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/&title=《Install tensorflow on centos》 — Life is like hiking&source=[root@localhost ~]# pip listCython (0.24.1)funcsigs (1.0.2)mock (2.0.0)numpy ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/10/07/2016-10-15-Install_tensorflow_centos/">Install tensorflow on centos</a>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/05/21/2016-05-21-2s-walk-100k-files/">使用并发在2s完成10G文件的校验</a>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Install tensorflow on centos》 — Life is like hiking&url=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/&via=http://hikings.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
       </li>
-    
-  </ul>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hikings.github.io/2016/10/07/2016-10-15-Install_tensorflow_centos/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACs0lEQVR42u3aQW5bMQwFQN//0uk2QGP9R1JMXWC0MmxHX6MAokzy9YrH17fx/Z2/P02+eZ4z+dvLAw8PD2+w9PMSk0/fzZ9s1nmGZD0/zICHh4e3xjsvq3fQ9w706nMfnoWHh4f38bzJXTf/Dh4eHt7/zjvD8sXlJDw8PLxP4FVTseerc+9A7yV8r+Va8PDw8GLeRoJg+/VKfQ8PDw9vXFU/H7jJw6pHdq9B4e1q8fDw8BZ4vYX2HhwlDhY2CA8PD+8uL08rJEmH8/erydmkMevhNR4eHt4Cb1586jWY9sJJL/zg4eHh3eWdp6iWvs5bMymt5cnlh98KeHh4eGNefohPCv/5RiSMcmEMDw8Pb43Xa8DqJV7z7auGnB/mwcPDw7vKS67U1cX1QkL+3EIww8PDw1vgVctdSSDptSD00h/R1uDh4eEt8HoFsF7JPylxVduz8nnw8PDwNnjV5EJ1ufmFu7dxeHh4eNu8aro2+TQ53PPGguoWl/MfeHh4eJd41emqBapJaqOQCMbDw8P7RV61+NRLClRTwOX2Lzw8PLxlXrkkXwwJSS6k2l7wEFTw8PDw1niv4sgP9CpsUgx7e6XGw8PDW+bNE7uTINELJ3h4eHi/ycuTC73SVzWxOwlUb2fAw8PDW+BVr86T0n4SGPK0SDV1goeHh3eLNwkMhUJ+8RKfb+LDfwwPDw9vmVd92DyJkIeQchoCDw8Pb5lXnaJ5TOfLGm8NHh4e3gbvqzgm4aTayDVvWcDDw8Pb4N1ttKqW9pNr9+T7eHh4eHu86rGepGXnrQDX2g7w8PDw1ni9QzkveiUl/9d4vA0MeHh4eP+UV110fojP0w14eHh4n8nrtaveep0nmvHw8PC2eUkyInm/GhiqM1Q3Fw8PD2+DV/2Rny8uP6UnhbcLAw8PDy8dfwBe4nOoiJRn/QAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
-  
-<div class="widget tag">
-  <h3 class="title">标签</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/AI/">AI</a><small>2</small></li>
-  
-    <li><a href="/tags/Centos/">Centos</a><small>2</small></li>
-  
-    <li><a href="/tags/Concurrent/">Concurrent</a><small>2</small></li>
-  
-    <li><a href="/tags/Containers/">Containers</a><small>1</small></li>
-  
-    <li><a href="/tags/Crawler/">Crawler</a><small>1</small></li>
-  
-    <li><a href="/tags/DS/">DS</a><small>3</small></li>
-  
-    <li><a href="/tags/Deployment-Management/">Deployment-Management</a><small>1</small></li>
-  
-    <li><a href="/tags/GoLang/">GoLang</a><small>5</small></li>
-  
-    <li><a href="/tags/IDE/">IDE</a><small>1</small></li>
-  
-    <li><a href="/tags/MachineLearning/">MachineLearning</a><small>1</small></li>
-  
-    <li><a href="/tags/NIO/">NIO</a><small>1</small></li>
-  
-    <li><a href="/tags/PAPER/">PAPER</a><small>3</small></li>
-  
-    <li><a href="/tags/Package-Management/">Package-Management</a><small>1</small></li>
-  
-    <li><a href="/tags/Parallelism/">Parallelism</a><small>2</small></li>
-  
-    <li><a href="/tags/Python/">Python</a><small>1</small></li>
-  
-    <li><a href="/tags/Static-Website/">Static-Website</a><small>2</small></li>
-  
-    <li><a href="/tags/Tensorflow/">Tensorflow</a><small>1</small></li>
-  
-    <li><a href="/tags/netflix/">netflix</a><small>1</small></li>
-  
-    <li><a href="/tags/note/">note</a><small>1</small></li>
-  
-    <li><a href="/tags/opensource/">opensource</a><small>1</small></li>
-  
-  </ul>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
 </div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
-  
-<div class="widget tagcloud">
-  <h3 class="title">标签云</h3>
-  <div class="entry">
-    <a href="/tags/AI/" style="font-size: 13.33px;">AI</a> <a href="/tags/Centos/" style="font-size: 13.33px;">Centos</a> <a href="/tags/Concurrent/" style="font-size: 13.33px;">Concurrent</a> <a href="/tags/Containers/" style="font-size: 10px;">Containers</a> <a href="/tags/Crawler/" style="font-size: 10px;">Crawler</a> <a href="/tags/DS/" style="font-size: 16.67px;">DS</a> <a href="/tags/Deployment-Management/" style="font-size: 10px;">Deployment-Management</a> <a href="/tags/GoLang/" style="font-size: 20px;">GoLang</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/MachineLearning/" style="font-size: 10px;">MachineLearning</a> <a href="/tags/NIO/" style="font-size: 10px;">NIO</a> <a href="/tags/PAPER/" style="font-size: 16.67px;">PAPER</a> <a href="/tags/Package-Management/" style="font-size: 10px;">Package-Management</a> <a href="/tags/Parallelism/" style="font-size: 13.33px;">Parallelism</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Static-Website/" style="font-size: 13.33px;">Static-Website</a> <a href="/tags/Tensorflow/" style="font-size: 10px;">Tensorflow</a> <a href="/tags/netflix/" style="font-size: 10px;">netflix</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/opensource/" style="font-size: 10px;">opensource</a>
-  </div>
-</div>
-
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  <p>
-  
-  &copy; 2017 Kendall.j.
-  
-  All rights reserved.</p>
-  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</div>
-<div class="clearfix"></div>
-
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
 </script>
 
 
-<div id='bg'></div>
+
 </body>
 </html>

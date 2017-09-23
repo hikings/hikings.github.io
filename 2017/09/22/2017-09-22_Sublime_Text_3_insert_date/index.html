@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Sublime Text 3 插入日期时间 | Life is like hiking | Keep It Simple,Stupid!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="sublimeText">
+    <meta name="description" content="Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下：
+1. 菜单栏：Tools -&amp;gt; New Plugin...
+
+2. 此时会打开一个插件模版文件，使用下面的内容覆盖">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sublime Text 3 插入日期时间">
+<meta property="og:url" content="http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/index.html">
+<meta property="og:site_name" content="Life is like hiking">
+<meta property="og:description" content="Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下：
+1. 菜单栏：Tools -&amp;gt; New Plugin...
+
+2. 此时会打开一个插件模版文件，使用下面的内容覆盖">
+<meta property="og:updated_time" content="2017-09-22T16:59:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sublime Text 3 插入日期时间">
+<meta name="twitter:description" content="Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下：
+1. 菜单栏：Tools -&amp;gt; New Plugin...
+
+2. 此时会打开一个插件模版文件，使用下面的内容覆盖">
+    
+        <link rel="alternate" type="application/atom+xml" title="Life is like hiking" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Kendall.j.</h5>
+          <a href="mailto:kendall.j@foxmail.com" title="kendall.j@foxmail.com" class="mail">kendall.j@foxmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Sublime Text 3 插入日期时间</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Sublime Text 3 插入日期时间</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-09-22T15:52:50.000Z" itemprop="datePublished" class="page-time">
+  9月 22 2017
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Tips/">Tips</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-2017-09-22_Sublime_Text_3_insert_date"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Sublime Text 3 插入日期时间</h1>
+        <div class="post-meta">
+            <time class="post-time" title="9月 22 2017 23:52:50" datetime="2017-09-22T15:52:50.000Z"  itemprop="datePublished">9月 22 2017</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Tips/">Tips</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下：</p>
+<pre><code>1. 菜单栏：Tools -&gt; New Plugin...
+
+2. 此时会打开一个插件模版文件，使用下面的内容覆盖
+</code></pre><a id="more"></a>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">import datetime, getpass</div><div class="line">import sublime, sublime_plugin</div><div class="line">import datetime</div><div class="line"></div><div class="line">class AddDateTimeStampCommand(sublime_plugin.TextCommand):</div><div class="line">    def run(self, edit):</div><div class="line">        self.view.run_command("insert_snippet",</div><div class="line">            &#123;</div><div class="line">                # "contents": "%s" % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S %A")</div><div class="line">                # 可根据自己的需要进行调整（参照后面的日期时间格式）</div><div class="line">                "contents": "/**""\n"</div><div class="line">                " * ""\n"</div><div class="line">                " * @author:      author""\n"</div><div class="line">                " * @dateTime:    "  "%s"  %datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") +"\n"</div><div class="line">                " * @description: ""\n"</div><div class="line">                " */"</div><div class="line">            &#125;</div><div class="line">        )</div><div class="line">```        </div><div class="line">    3. ctrl+s保存文件，输入文件名 add_date.py，可以随便定义，然后确认一下保存的位置是 Packages/User/add_date.py</div><div class="line"></div><div class="line">    4. 绑定快捷键，在菜单栏：Preferences -&gt; Key Bindings -&gt; User，使用下面的内容覆盖</div><div class="line">```python</div><div class="line">[</div><div class="line">    &#123;"keys": ["ctrl+shift+f5"], "command": "add_date_time_stamp" &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<pre><code>5. 保存上一步的快捷键设置，在需要插入的地方使用快捷键试试吧！效果如下：
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> *</div><div class="line"> * @author:      author</div><div class="line"> * @dateTime:    2015-08-12 11:42:34</div><div class="line"> * @description:</div><div class="line"> */</div><div class="line"> class Demo &#123;</div><div class="line"> </div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>附录（strftime的格式）：</p>
+<p>%a 星期简称</p>
+<p>%A 星期全称</p>
+<p>%b 月份简称</p>
+<p>%B 月份全称</p>
+<p>%c 标准的日期的时间串</p>
+<p>%C 年份的后两位数字</p>
+<p>%d 十进制表示的每月的第几天</p>
+<p>%D 月/天/年</p>
+<p>%e 在两字符域中，十进制表示的每月的第几天</p>
+<p>%F 年-月-日</p>
+<p>%g 年份的后两位数字，使用基于周的年</p>
+<p>%G 年份，使用基于周的年</p>
+<p>%h 简写的月份名</p>
+<p>%H 24小时制的小时</p>
+<p>%I 12小时制的小时</p>
+<p>%j 十进制表示的每年的第几天</p>
+<p>%m 十进制表示的月份</p>
+<p>%M 十时制表示的分钟数</p>
+<p>%n 新行符</p>
+<p>%p 本地的AM或PM的等价显示</p>
+<p>%r 12小时的时间</p>
+<p>%R 显示小时和分钟：hh:mm</p>
+<p>%S 十进制的秒数</p>
+<p>%t 水平制表符</p>
+<p>%T 显示时分秒：hh:mm:ss</p>
+<p>%u 每周的第几天，星期一为第一天 （值从0到6，星期一为0）</p>
+<p>%U 第年的第几周，把星期日作为第一天（值从0到53）</p>
+<p>%V 每年的第几周，使用基于周的年</p>
+<p>%w 十进制表示的星期几（值从0到6，星期天为0）</p>
+<p>%W 每年的第几周，把星期一做为第一天（值从0到53）</p>
+<p>%x 标准的日期串</p>
+<p>%X 标准的时间串</p>
+<p>%y 不带世纪的十进制年份（值从0到99）</p>
+<p>%Y 带世纪部分的十制年份</p>
+<p>%z，%Z 时区名称，如果不能得到时区名称则返回空字符。</p>
+<p>%% 百分号</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-09-22T16:59:30.000Z" itemprop="dateUpdated">9月 23 2017 00:59:30</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://hikings.github.io">
+            <img src="/img/avatar.jpg" alt="Kendall.j.">
+            Kendall.j.
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublimeText/">sublimeText</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/&title=《Sublime Text 3 插入日期时间》 — Life is like hiking&pic=http://hikings.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/&title=《Sublime Text 3 插入日期时间》 — Life is like hiking&source=Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下：
+1. 菜单..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Sublime Text 3 插入日期时间》 — Life is like hiking&url=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/&via=http://hikings.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/09/22/2017-09-22-netflix-open-source/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Netflix 开源项目推荐</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Kendall.j. &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/&title=《Sublime Text 3 插入日期时间》 — Life is like hiking&pic=http://hikings.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/&title=《Sublime Text 3 插入日期时间》 — Life is like hiking&source=Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下：
+1. 菜单..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Sublime Text 3 插入日期时间》 — Life is like hiking&url=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/&via=http://hikings.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuUlEQVR42u3aQVLDMAwFUO5/6TLDCgZI/7fstIuXVQfaxM8LyZH08RFfj6/r++fr6/oO1/dJ/rv5wsPDw1taevKw399PNiKntuuJtgAPDw/vGK9d6PUWXG9EsgW7Ng4PDw/vtbwkYSSwa3CePPDw8PDen9cWF5IjeLJNeHh4eO/J2/byv3TP5Jh+vNaCh4eH161nsRDwqs/H+3t4eHh4S131SUssKUYkheDJavHw8PBO8PJiQfTaXy5l0mYrEgYeHh7eVl7+ep+H+DyFTEoPUasMDw8P7xivHR2YtPzboN+mseIwjYeHh7fEa2uh+fE6eUx7gN5GwsPDwxvw2sGp5FicLLdNGPlq/8h7eHh4eFt5ec0zGSPIG2N58TdnPHkKHh4e3ibepByQj2QlCaAtGUdHeTw8PLwDvLVbtCkhD/e7irl4eHh453i7Bq3yEF+c8ZfKuz/+goeHh3eAlxdbkxs9lq5J+QMPDw/vft7ewJ3vaD7mlX8n6u/h4eHhjXn3THLl6WEyzoWHh4d3P2+txZUUgvOwXre11rIfHh4e3oA3gbUdtuuBgOt7tqUKPDw8vHO8fGigHQtoE0Z7NC/KJXh4eHgHeElQToL7WpMsD/2T4i8eHh7eLl4S7tsAvXdr1o7af7wx4OHh4W3i5QWISShfG5matOXw8PDwTvMmQXytVdaOCDziK3oAHh4e3piXB+u1Uaq10D8f8MLDw8O7n3d907Z4sZZgElhRjMDDw8Mb8x7lNe8r7f3Vk7vh4eHhHeC1A09tIkkWPR8Ca4/deHh4eHPeWjJoCxNt+G6bak9aX3h4eHgHeJNksLcYsZbB8PDw8N6Zl/+2DeWT9tu/68HDw8N7KW+eKtaO5nk3Dw8PD+9OXhvK2wcnWzYp/kZnbTw8PLxNvHkDbFeRom2AbRgawMPDw+ue9QkfsYi9MGLxwwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

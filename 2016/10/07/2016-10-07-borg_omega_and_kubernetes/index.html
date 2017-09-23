@@ -1,79 +1,181 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  
-  <title>谷歌论文 Borg、Omega and Kubernetes | Life is like hiking</title>
-  <meta name="author" content="Kendall.j." />
+    
 
-  
-  <meta name="description" content="分布式领域论文目录" />
-  
+    
 
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-  <meta property="og:title" content="谷歌论文 Borg、Omega and Kubernetes" />
-  <meta property="og:site_name" content="Life is like hiking" />
-
-  
-  
-
-  
-    <meta property="og:image" content="undefined" />
-  
-
-  
-  <link href="/css/images/favicon.ico" rel="icon" />
-  
-
-  <link rel="alternate" href="/atom.xml" title="Life is like hiking" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+    
 
 
-  <!-- baidu webmaster push -->
-  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>谷歌论文 Borg、Omega and Kubernetes | Life is like hiking | Keep It Simple,Stupid!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="DS,PAPER,Containers">
+    <meta name="description" content="分布式领域论文目录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谷歌论文 Borg、Omega and Kubernetes">
+<meta property="og:url" content="http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/index.html">
+<meta property="og:site_name" content="Life is like hiking">
+<meta property="og:description" content="分布式领域论文目录">
+<meta property="og:updated_time" content="2016-10-07T12:37:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="谷歌论文 Borg、Omega and Kubernetes">
+<meta name="twitter:description" content="分布式领域论文目录">
+    
+        <link rel="alternate" type="application/atom+xml" title="Life is like hiking" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
 
 </head>
 
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Life is like hiking</a></h1>
-  <h2><a href="/">Keep It Simple,Stupid!</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-10-07T04:01:33.000Z"><a href="/2016/10/07/2016-10-07-borg_omega_and_kubernetes/">Oct 7 2016</a></time>
-      
-      
-  
-    <h1 class="title">谷歌论文 Borg、Omega and Kubernetes</h1>
-  
+    <div id="loading" class="active"></div>
 
-    </header>
-    <div class="entry">
-      
-        <h1 id="google论文系列"><a href="#google论文系列" class="headerlink" title="google论文系列"></a>google论文系列</h1><h1 id="Borg、Omega-and-Kubernetes"><a href="#Borg、Omega-and-Kubernetes" class="headerlink" title="Borg、Omega and Kubernetes"></a>Borg、Omega and Kubernetes</h1><h2 id="谷歌十余年从三个容器管理系统中得到的经验教训"><a href="#谷歌十余年从三个容器管理系统中得到的经验教训" class="headerlink" title="谷歌十余年从三个容器管理系统中得到的经验教训"></a>谷歌十余年从三个容器管理系统中得到的经验教训</h2><h2 id="Lessons-learned-from-three-container-management-systems-over-a-decade"><a href="#Lessons-learned-from-three-container-management-systems-over-a-decade" class="headerlink" title="Lessons learned from three container-management systems over a decade"></a>Lessons learned from three container-management systems over a decade</h2><hr>
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Kendall.j.</h5>
+          <a href="mailto:kendall.j@foxmail.com" title="kendall.j@foxmail.com" class="mail">kendall.j@foxmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">谷歌论文 Borg、Omega and Kubernetes</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">谷歌论文 Borg、Omega and Kubernetes</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-10-07T04:01:33.000Z" itemprop="datePublished" class="page-time">
+  10月 7 2016
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Distributed-Computer-Systems/">Distributed-Computer-Systems</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#google论文系列"><span class="post-toc-text">google论文系列</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Borg、Omega-and-Kubernetes"><span class="post-toc-text">Borg、Omega and Kubernetes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#谷歌十余年从三个容器管理系统中得到的经验教训"><span class="post-toc-text">谷歌十余年从三个容器管理系统中得到的经验教训</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Lessons-learned-from-three-container-management-systems-over-a-decade"><span class="post-toc-text">Lessons learned from three container-management systems over a decade</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gt-从2000年以来，谷歌基于容器研发三个容器管理系统，分别是Borg、Omega和Kubernetes。这篇论文由这三个容器集群管理系统长年开发维护的谷歌工程师Brendan-Burns、Brian-Grant、David-Oppenheimer、Eric-Brewer和John-Wilkes于近日发表，阐述了谷歌从Borg到Kubernetes这个旅程中所获得知识和经验教训。"><span class="post-toc-text">> 从2000年以来，谷歌基于容器研发三个容器管理系统，分别是Borg、Omega和Kubernetes。这篇论文由这三个容器集群管理系统长年开发维护的谷歌工程师Brendan Burns、Brian Grant、David Oppenheimer、Eric Brewer和John Wilkes于近日发表，阐述了谷歌从Borg到Kubernetes这个旅程中所获得知识和经验教训。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#容器-Containers"><span class="post-toc-text">容器 Containers</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#面向应用的架构（Application-oriented-infrastructure）"><span class="post-toc-text">面向应用的架构（Application-oriented infrastructure）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#应用环境-Application-Environment"><span class="post-toc-text">应用环境 Application Environment</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#容器作为管理的单位-Containers-as-the-Unit-of-Management"><span class="post-toc-text">容器作为管理的单位 Containers as the Unit of Management</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编排只是开始，不是结束-Orchestration-is-the-Beginning-Not-the-End"><span class="post-toc-text">编排只是开始，不是结束 Orchestration is the Beginning, Not the End</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#需要避免的事情-Things-to-Avoid"><span class="post-toc-text">需要避免的事情 Things to Avoid</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#别让容器系统来管理port端口-Don’t-Make-the-Container-System-Manage-Port-Numbers"><span class="post-toc-text">别让容器系统来管理port端口 Don’t Make the Container System Manage Port Numbers</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#别仅仅只是给容器编号：给它们打标签-Don’t-Just-Number-Containers-Give-Them-Labels"><span class="post-toc-text">别仅仅只是给容器编号：给它们打标签 Don’t Just Number Containers: Give Them Labels</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对所有权要谨慎-Be-Careful-with-Ownership"><span class="post-toc-text">对所有权要谨慎 Be Careful with Ownership</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#不要暴露raw-state-Don’t-Expose-Raw-State"><span class="post-toc-text">不要暴露raw state Don’t Expose Raw State</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些开放性的难题-Some-Open-Hard-Problems"><span class="post-toc-text">一些开放性的难题 Some Open, Hard Problems</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Configuration"><span class="post-toc-text">Configuration</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#依赖条件的管理-Dependency-Management"><span class="post-toc-text">依赖条件的管理 Dependency Management</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结语-Conclusions"><span class="post-toc-text">结语 Conclusions</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-2016-10-07-borg_omega_and_kubernetes"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">谷歌论文 Borg、Omega and Kubernetes</h1>
+        <div class="post-meta">
+            <time class="post-time" title="10月 7 2016 12:01:33" datetime="2016-10-07T04:01:33.000Z"  itemprop="datePublished">10月 7 2016</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Distributed-Computer-Systems/">Distributed-Computer-Systems</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="google论文系列"><a href="#google论文系列" class="headerlink" title="google论文系列"></a>google论文系列</h1><h1 id="Borg、Omega-and-Kubernetes"><a href="#Borg、Omega-and-Kubernetes" class="headerlink" title="Borg、Omega and Kubernetes"></a>Borg、Omega and Kubernetes</h1><h2 id="谷歌十余年从三个容器管理系统中得到的经验教训"><a href="#谷歌十余年从三个容器管理系统中得到的经验教训" class="headerlink" title="谷歌十余年从三个容器管理系统中得到的经验教训"></a>谷歌十余年从三个容器管理系统中得到的经验教训</h2><h2 id="Lessons-learned-from-three-container-management-systems-over-a-decade"><a href="#Lessons-learned-from-three-container-management-systems-over-a-decade" class="headerlink" title="Lessons learned from three container-management systems over a decade"></a>Lessons learned from three container-management systems over a decade</h2><hr>
 <ul>
 <li><a href="http://queue.acm.org/detail.cfm?id=2898444" target="_blank" rel="external">英文版原文链接</a></li>
 <li>中文翻译参考了<a href="http://geek.csdn.net/news/detail/63070" target="_blank" rel="external">韩佳瑶的翻译</a>并做了修正</li>
@@ -221,183 +323,263 @@
 <p>acmqueue</p>
 <p>Originally published in Queue vol. 14, no. 1—<br>see this item in the <a href="http://portal.acm.org/citation.cfm?id=2898444" target="_blank" rel="external">ACM Digital Library</a></p>
 
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
         </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
         
-  
-  <div class="categories">
-    <a href="/categories/Distributed-Computer-Systems/">Distributed-Computer-Systems</a>
-  </div>
+<span class="post-time">
+    最后更新时间：<time datetime="2016-10-07T12:37:18.000Z" itemprop="dateUpdated">10月 7 2016 20:37:18</time>
+</span><br>
+
 
         
-  
-  <div class="tags">
-    <a href="/tags/DS/">DS</a>, <a href="/tags/PAPER/">PAPER</a>, <a href="/tags/Containers/">Containers</a>
-  </div>
-
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
+    </div>
+    <footer>
+        <a href="http://hikings.github.io">
+            <img src="/img/avatar.jpg" alt="Kendall.j.">
+            Kendall.j.
+        </a>
     </footer>
-  </div>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Containers/">Containers</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DS/">DS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PAPER/">PAPER</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/&title=《谷歌论文 Borg、Omega and Kubernetes》 — Life is like hiking&pic=http://hikings.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/&title=《谷歌论文 Borg、Omega and Kubernetes》 — Life is like hiking&source=google论文系列Borg、Omega and Kubernetes谷歌十余年从三个容器管理系统中得到的经验教训Lessons learned from..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《谷歌论文 Borg、Omega and Kubernetes》 — Life is like hiking&url=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/&via=http://hikings.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/10/07/2016-10-15-Install_python27_centos/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Install python27 on centos6</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/10/07/2016-10-15-Install_tensorflow_centos/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Install tensorflow on centos</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
 </article>
 
 
 
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:hikings.github.io">
-  </form>
 </div>
 
-  
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/AI/">AI</a><small>2</small></li>
-  
-    <li><a href="/categories/Concurrent-Parallelism/">Concurrent &amp; Parallelism</a><small>1</small></li>
-  
-    <li><a href="/categories/Distributed-Computer-Systems/">Distributed-Computer-Systems</a><small>3</small></li>
-  
-    <li><a href="/categories/Go/">Go</a><small>2</small></li>
-  
-    <li><a href="/categories/IDE/">IDE</a><small>1</small></li>
-  
-    <li><a href="/categories/MachineLearning/">MachineLearning</a><small>3</small></li>
-  
-    <li><a href="/categories/Package-Management/">Package-Management</a><small>1</small></li>
-  
-    <li><a href="/categories/Static-Website/">Static-Website</a><small>2</small></li>
-  
-    <li><a href="/categories/note/">note</a><small>1</small></li>
-  
-  </ul>
-</div>
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
 
 
-  
-<div class="widget tag">
-  <h3 class="title">最新文章</h3>
-  <ul class="entry">
-    
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Kendall.j. &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
       <li>
-        <a href="/2017/09/22/2017-09-22-netflix-open-source/">Netflix 开源项目推荐</a>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/&title=《谷歌论文 Borg、Omega and Kubernetes》 — Life is like hiking&pic=http://hikings.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/10/07/2016-10-15-Install_python27_centos/">Install python27 on centos6</a>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/10/07/2016-10-07-borg_omega_and_kubernetes/">谷歌论文 Borg、Omega and Kubernetes</a>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/&title=《谷歌论文 Borg、Omega and Kubernetes》 — Life is like hiking&source=google论文系列Borg、Omega and Kubernetes谷歌十余年从三个容器管理系统中得到的经验教训Lessons learned from..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/10/07/2016-10-15-Install_tensorflow_centos/">Install tensorflow on centos</a>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/05/21/2016-05-21-2s-walk-100k-files/">使用并发在2s完成10G文件的校验</a>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《谷歌论文 Borg、Omega and Kubernetes》 — Life is like hiking&url=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/&via=http://hikings.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
       </li>
-    
-  </ul>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hikings.github.io/2016/10/07/2016-10-07-borg_omega_and_kubernetes/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqklEQVR42u3aUW7jMAwE0N7/0t0DtE5nSGnTAs9fRRrbegogEUN9fMTX58P19J2vn7/+TvKEp7sOXHh4eHiHhv51WBvqZoLyMXxzLx4eHt41Xv642XL/ekLzqcnHjIeHh/d7eDmsvTfZTvDw8PD+Fi8vxKNi9+WTk60CDw8P7728JIyYfZ4z2oL+cNaCh4eH163PURfp9/x9pb+Hh4eHt+6qzzaMdjM41fT6Zgx4eHh4F3jtojwrW18jZ28vync8PDy8y7w8wN2w2zbYDImHh4d3j9c2mTZN/XzoB0h4eHh413izl+XT1B5KaPPYH56Jh4eHd5m3iQY2xwVm8W40TXh4eHgXeO1tm6bU65I6iSpWh67w8PDwDvHaQKFlJ58k/01Gi4eHh3ebN1tw86BhP33Jnvb4TTw8PLzLvNlCv2n25w2ztvTHw8PDexcvD3bb4wVnY9zHt+Dh4eFd4+WPTl65iYNn0XCRsuDh4eGtebNStUXmG8DZCcLDw8O7wZsFBHnw2hbQeTkebRh4eHh413h5WZxfs2L9VIxb/xp4eHh4Xb++OPqZxwGzoGH2liJxwcPDw1vzZqXqfjtpjx20MccPJTUeHh7eUV4bmM6OZ21iiGKa8PDw8K7x2oJ1E1Lsp6MYCR4eHt4FXsJot4dkKc8n7uJBKzw8PLwRbxa8toelZu202fGsx6MDeHh4eId40b9HgcIm7GinAw8PD+9/8j7Lq124Z9vGJoCIfjc8PDy8Ba8NXvMgIC982+nLi348PDy8e7x2Qc/L34TRBsf11oKHh4d3jZf3j2YvawvlTRhRJyJ4eHh413j3Ct99sPv4Y+Dh4eG9lZfj8+V+VtAXWwgeHh7eNd4mjNhsDGefXHf58PDw8Ea8vAGWxw156Zy/cXaYAA8PD+8o7x/9Su9k9DqqSgAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
-  
-<div class="widget tag">
-  <h3 class="title">标签</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/AI/">AI</a><small>2</small></li>
-  
-    <li><a href="/tags/Centos/">Centos</a><small>2</small></li>
-  
-    <li><a href="/tags/Concurrent/">Concurrent</a><small>2</small></li>
-  
-    <li><a href="/tags/Containers/">Containers</a><small>1</small></li>
-  
-    <li><a href="/tags/Crawler/">Crawler</a><small>1</small></li>
-  
-    <li><a href="/tags/DS/">DS</a><small>3</small></li>
-  
-    <li><a href="/tags/Deployment-Management/">Deployment-Management</a><small>1</small></li>
-  
-    <li><a href="/tags/GoLang/">GoLang</a><small>5</small></li>
-  
-    <li><a href="/tags/IDE/">IDE</a><small>1</small></li>
-  
-    <li><a href="/tags/MachineLearning/">MachineLearning</a><small>1</small></li>
-  
-    <li><a href="/tags/NIO/">NIO</a><small>1</small></li>
-  
-    <li><a href="/tags/PAPER/">PAPER</a><small>3</small></li>
-  
-    <li><a href="/tags/Package-Management/">Package-Management</a><small>1</small></li>
-  
-    <li><a href="/tags/Parallelism/">Parallelism</a><small>2</small></li>
-  
-    <li><a href="/tags/Python/">Python</a><small>1</small></li>
-  
-    <li><a href="/tags/Static-Website/">Static-Website</a><small>2</small></li>
-  
-    <li><a href="/tags/Tensorflow/">Tensorflow</a><small>1</small></li>
-  
-    <li><a href="/tags/netflix/">netflix</a><small>1</small></li>
-  
-    <li><a href="/tags/note/">note</a><small>1</small></li>
-  
-    <li><a href="/tags/opensource/">opensource</a><small>1</small></li>
-  
-  </ul>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
 </div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
-  
-<div class="widget tagcloud">
-  <h3 class="title">标签云</h3>
-  <div class="entry">
-    <a href="/tags/AI/" style="font-size: 13.33px;">AI</a> <a href="/tags/Centos/" style="font-size: 13.33px;">Centos</a> <a href="/tags/Concurrent/" style="font-size: 13.33px;">Concurrent</a> <a href="/tags/Containers/" style="font-size: 10px;">Containers</a> <a href="/tags/Crawler/" style="font-size: 10px;">Crawler</a> <a href="/tags/DS/" style="font-size: 16.67px;">DS</a> <a href="/tags/Deployment-Management/" style="font-size: 10px;">Deployment-Management</a> <a href="/tags/GoLang/" style="font-size: 20px;">GoLang</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/MachineLearning/" style="font-size: 10px;">MachineLearning</a> <a href="/tags/NIO/" style="font-size: 10px;">NIO</a> <a href="/tags/PAPER/" style="font-size: 16.67px;">PAPER</a> <a href="/tags/Package-Management/" style="font-size: 10px;">Package-Management</a> <a href="/tags/Parallelism/" style="font-size: 13.33px;">Parallelism</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Static-Website/" style="font-size: 13.33px;">Static-Website</a> <a href="/tags/Tensorflow/" style="font-size: 10px;">Tensorflow</a> <a href="/tags/netflix/" style="font-size: 10px;">netflix</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/opensource/" style="font-size: 10px;">opensource</a>
-  </div>
-</div>
-
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  <p>
-  
-  &copy; 2017 Kendall.j.
-  
-  All rights reserved.</p>
-  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</div>
-<div class="clearfix"></div>
-
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
 </script>
 
 
-<div id='bg'></div>
+
 </body>
 </html>

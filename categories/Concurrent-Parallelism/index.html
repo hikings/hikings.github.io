@@ -1,282 +1,373 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  
-  <title>Concurrent &amp; Parallelism | Life is like hiking</title>
-  <meta name="author" content="Kendall.j." />
+    
 
-  
-  <meta name="description" content="��ѧ�����ʡ���˼�����桢����" />
-  
+    
 
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-  
-  <meta property="og:site_name" content="Life is like hiking" />
-
-  
-  
-
-  
-    <meta property="og:image" content="undefined" />
-  
-
-  
-  <link href="/css/images/favicon.ico" rel="icon" />
-  
-
-  <link rel="alternate" href="/atom.xml" title="Life is like hiking" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+    
 
 
-  <!-- baidu webmaster push -->
-  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Categories: Concurrent &amp; Parallelism | Life is like hiking | Keep It Simple,Stupid!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="undefined">
+    <meta name="description" content="��ѧ�����ʡ���˼�����桢����">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Life is like hiking">
+<meta property="og:url" content="http://hikings.github.io/categories/Concurrent-Parallelism/index.html">
+<meta property="og:site_name" content="Life is like hiking">
+<meta property="og:description" content="��ѧ�����ʡ���˼�����桢����">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Life is like hiking">
+<meta name="twitter:description" content="��ѧ�����ʡ���˼�����桢����">
+    
+        <link rel="alternate" type="application/atom+xml" title="Life is like hiking" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
 
 </head>
 
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Life is like hiking</a></h1>
-  <h2><a href="/">Keep It Simple,Stupid!</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title category">Concurrent &amp; Parallelism</h2>
+    <div id="loading" class="active"></div>
 
-
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-05-07T15:19:32.000Z"><a href="/2016/05/07/2016-05-07-concurrent-and-parallelism/">May 7 2016</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/05/07/2016-05-07-concurrent-and-parallelism/">并发编程的春天</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <ul>
-<li>在过去的30年里，计算机的性能是在摩尔定律的推动下，从现在开始，这将由Amdahl’s Law决定。编写代码，有效地利用多个处理器可以是非常具有挑战性的。” -Doron Rajwan　　</li>
-<li><p>Amdahl’s Law：每个程序都分为串行与并行部分，降低串行的比重，可提高程序的效率。</p>
-</li>
-<li><p>现在系统面临下面的挑战：</p>
-<ul>
-<li>单节点上如何充分的利用多核</li>
-<li>云化或分布式网络化环境下越来越复杂的编程问题</li>
-<li>负责的部署和一致性检测难度
-      
-    </div>
-    
-    <footer>
-      <div class="alignleft">
-        <a href="/2016/05/07/2016-05-07-concurrent-and-parallelism/#more" class="more-link">更多内容</a>
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Kendall.j.</h5>
+          <a href="mailto:kendall.j@foxmail.com" title="kendall.j@foxmail.com" class="mail">kendall.j@foxmail.com</a>
+        </hgroup>
       </div>
-    </footer>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect active">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Categories: Concurrent &amp; Parallelism</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
         </div>
         
-  
-  <div class="categories">
-    <a href="/categories/Concurrent-Parallelism/">Concurrent & Parallelism</a>
-  </div>
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header categories-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Categories: Concurrent &amp; Parallelism</h1>
+        <h5 class="subtitle">
+            
+        </h5>
+    </div>
+
+    
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/categories" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+            ">全部</a>
+        
+
+            <a href="/categories/Static-Website/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">Static-Website</a>
 
         
-  
-  <div class="tags">
-    <a href="/tags/Concurrent/">Concurrent</a>, <a href="/tags/Parallelism/">Parallelism</a>
-  </div>
 
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
+            <a href="/categories/note/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">note</a>
 
+        
 
+            <a href="/categories/Package-Management/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">Package-Management</a>
 
+        
 
-  
+            <a href="/categories/AI/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">AI</a>
 
-  <nav id="pagination">
-  
-</nav>
+        
 
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:hikings.github.io">
-  </form>
-</div>
+            <a href="/categories/Distributed-Computer-Systems/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">Distributed-Computer-Systems</a>
 
-  
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/AI/">AI</a><small>2</small></li>
-  
-    <li><a href="/categories/Concurrent-Parallelism/">Concurrent &amp; Parallelism</a><small>1</small></li>
-  
-    <li><a href="/categories/Distributed-Computer-Systems/">Distributed-Computer-Systems</a><small>3</small></li>
-  
-    <li><a href="/categories/Go/">Go</a><small>2</small></li>
-  
-    <li><a href="/categories/IDE/">IDE</a><small>1</small></li>
-  
-    <li><a href="/categories/MachineLearning/">MachineLearning</a><small>3</small></li>
-  
-    <li><a href="/categories/Package-Management/">Package-Management</a><small>1</small></li>
-  
-    <li><a href="/categories/Static-Website/">Static-Website</a><small>2</small></li>
-  
-    <li><a href="/categories/note/">note</a><small>1</small></li>
-  
-  </ul>
+        
+
+            <a href="/categories/Concurrent-Parallelism/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">Concurrent & Parallelism</a>
+
+        
+
+            <a href="/categories/IDE/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">IDE</a>
+
+        
+
+            <a href="/categories/MachineLearning/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">MachineLearning</a>
+
+        
+
+            <a href="/categories/Go/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">Go</a>
+
+        
+
+            <a href="/categories/Tips/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">Tips</a>
+
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
 </div>
 
 
-  
-<div class="widget tag">
-  <h3 class="title">最新文章</h3>
-  <ul class="entry">
+
+</header>
+
+<div class="container body-wrap fade">
     
+            <div class="waterfall">
+          
+
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="5月 7 2016 23:19:32" datetime="2016-05-07T15:19:32.000Z"  itemprop="datePublished">5月 7 2016</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Concurrent-Parallelism/">Concurrent & Parallelism</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/05/07/2016-05-07-concurrent-and-parallelism/">并发编程的春天</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Concurrent/">Concurrent</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Parallelism/">Parallelism</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+            </div>
+        
+    
+</div>
+
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Kendall.j. &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
       <li>
-        <a href="/2017/09/22/2017-09-22-netflix-open-source/">Netflix 开源项目推荐</a>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hikings.github.io/categories/Concurrent-Parallelism/&title=Life is like hiking&pic=http://hikings.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/10/07/2016-10-15-Install_python27_centos/">Install python27 on centos6</a>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/10/07/2016-10-07-borg_omega_and_kubernetes/">谷歌论文 Borg、Omega and Kubernetes</a>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hikings.github.io/categories/Concurrent-Parallelism/&title=Life is like hiking&source=��ѧ�����ʡ���˼�����桢����" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/10/07/2016-10-15-Install_tensorflow_centos/">Install tensorflow on centos</a>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hikings.github.io/categories/Concurrent-Parallelism/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
       </li>
-    
       <li>
-        <a href="/2016/05/21/2016-05-21-2s-walk-100k-files/">使用并发在2s完成10G文件的校验</a>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Life is like hiking&url=http://hikings.github.io/categories/Concurrent-Parallelism/&via=http://hikings.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
       </li>
-    
-  </ul>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hikings.github.io/categories/Concurrent-Parallelism/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACN0lEQVR42u3a207DQAxF0f7/T5fXIshkH3tSKc7OEyohzAqS8e31wtf74/r85Oiev99dP239+bZLhgwZt2W8l9f6iEf37H3++mdlyJDxHMZRBCPHXQfKIxh/MnmmDBkyZJCj8HBM7pQhQ4aMvYz1c/aWyjJkyHgy44qAyMvRr9biMmTIuCGDh8Lvf33JfEOGDBm3YtSC4C5e5yS/TiVDhozRDB7g1iSyNlFrvQXrGjJkyBjKqJWsJATzY9WGo//8HWTIkDGUUfvhdM0iTTGLwwkZMmQMZfQPSg7E08pisJYhQ8Zoxt7liXR1rBOCD88mQ4aMoYxWO75dvtaK2A2DTBkyZNyKsauYvGLMGaeGMmTIGMeotcn44mltYBkHdxkyZDyG0fkFnaFCWkKfbIvIkCFjHIMcLl2V4K26zmqFDBkynsxIh4ukGde5p7UzIkOGjHGMuDOHE75aSI0/lyFDxlBG2uJPp4dp4sjvOekaypAhYxCDJILkc54CpjsSPE2UIUPGbAZvb6WwdCyaDgxQgihDhoxBDN7w4o02Phzl/wBe6XuSIUPGOMauxQiePtZGnmiEKUOGjBGMd3jxd8PLV55untTfMmTIGMpIG2FXJHm8TO28LBkyZNydUVvJSgeNPDQXX5kMGTIewEjXJsixOoVxeloZMmTI6ByXt+Q6IV6GDBky0qUx0lYjSxhBuJchQ8YDGHzNIm2rpWsZJFmUIUPG0xhp6UhCZ20kQFLJDfMNGTJk3InxA9Z1k2HNzfc0AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
-  
-<div class="widget tag">
-  <h3 class="title">标签</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/AI/">AI</a><small>2</small></li>
-  
-    <li><a href="/tags/Centos/">Centos</a><small>2</small></li>
-  
-    <li><a href="/tags/Concurrent/">Concurrent</a><small>2</small></li>
-  
-    <li><a href="/tags/Containers/">Containers</a><small>1</small></li>
-  
-    <li><a href="/tags/Crawler/">Crawler</a><small>1</small></li>
-  
-    <li><a href="/tags/DS/">DS</a><small>3</small></li>
-  
-    <li><a href="/tags/Deployment-Management/">Deployment-Management</a><small>1</small></li>
-  
-    <li><a href="/tags/GoLang/">GoLang</a><small>5</small></li>
-  
-    <li><a href="/tags/IDE/">IDE</a><small>1</small></li>
-  
-    <li><a href="/tags/MachineLearning/">MachineLearning</a><small>1</small></li>
-  
-    <li><a href="/tags/NIO/">NIO</a><small>1</small></li>
-  
-    <li><a href="/tags/PAPER/">PAPER</a><small>3</small></li>
-  
-    <li><a href="/tags/Package-Management/">Package-Management</a><small>1</small></li>
-  
-    <li><a href="/tags/Parallelism/">Parallelism</a><small>2</small></li>
-  
-    <li><a href="/tags/Python/">Python</a><small>1</small></li>
-  
-    <li><a href="/tags/Static-Website/">Static-Website</a><small>2</small></li>
-  
-    <li><a href="/tags/Tensorflow/">Tensorflow</a><small>1</small></li>
-  
-    <li><a href="/tags/netflix/">netflix</a><small>1</small></li>
-  
-    <li><a href="/tags/note/">note</a><small>1</small></li>
-  
-    <li><a href="/tags/opensource/">opensource</a><small>1</small></li>
-  
-  </ul>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
 </div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
-  
-<div class="widget tagcloud">
-  <h3 class="title">标签云</h3>
-  <div class="entry">
-    <a href="/tags/AI/" style="font-size: 13.33px;">AI</a> <a href="/tags/Centos/" style="font-size: 13.33px;">Centos</a> <a href="/tags/Concurrent/" style="font-size: 13.33px;">Concurrent</a> <a href="/tags/Containers/" style="font-size: 10px;">Containers</a> <a href="/tags/Crawler/" style="font-size: 10px;">Crawler</a> <a href="/tags/DS/" style="font-size: 16.67px;">DS</a> <a href="/tags/Deployment-Management/" style="font-size: 10px;">Deployment-Management</a> <a href="/tags/GoLang/" style="font-size: 20px;">GoLang</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/MachineLearning/" style="font-size: 10px;">MachineLearning</a> <a href="/tags/NIO/" style="font-size: 10px;">NIO</a> <a href="/tags/PAPER/" style="font-size: 16.67px;">PAPER</a> <a href="/tags/Package-Management/" style="font-size: 10px;">Package-Management</a> <a href="/tags/Parallelism/" style="font-size: 13.33px;">Parallelism</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Static-Website/" style="font-size: 13.33px;">Static-Website</a> <a href="/tags/Tensorflow/" style="font-size: 10px;">Tensorflow</a> <a href="/tags/netflix/" style="font-size: 10px;">netflix</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/opensource/" style="font-size: 10px;">opensource</a>
-  </div>
-</div>
-
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  <p>
-  
-  &copy; 2017 Kendall.j.
-  
-  All rights reserved.</p>
-  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</div>
-<div class="clearfix"></div>
-
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
 </script>
 
 
-<div id='bg'></div>
+
 </body>
 </html>
