@@ -20,30 +20,23 @@
     
     
     <meta name="keywords" content="sublimeText">
-    <meta name="description" content="Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下：
-1. 菜单栏：Tools -&amp;gt; New Plugin...
-
-2. 此时会打开一个插件模版文件，使用下面的内容覆盖">
+    <meta name="description" content="Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下： 1. 菜单栏：Tools -&amp;gt; New Plugin...  2. 此时会打开一个插件模版文件，使用下面的内容覆盖">
+<meta name="keywords" content="sublimeText">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime Text 3 插入日期时间">
 <meta property="og:url" content="http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/index.html">
 <meta property="og:site_name" content="Life is like hiking">
-<meta property="og:description" content="Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下：
-1. 菜单栏：Tools -&amp;gt; New Plugin...
-
-2. 此时会打开一个插件模版文件，使用下面的内容覆盖">
+<meta property="og:description" content="Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下： 1. 菜单栏：Tools -&amp;gt; New Plugin...  2. 此时会打开一个插件模版文件，使用下面的内容覆盖">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-22T16:59:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime Text 3 插入日期时间">
-<meta name="twitter:description" content="Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下：
-1. 菜单栏：Tools -&amp;gt; New Plugin...
-
-2. 此时会打开一个插件模版文件，使用下面的内容覆盖">
+<meta name="twitter:description" content="Sublime  Text 并没有自带插入日期时间的功能，但是可以通过插件的方式实现，这也是sublime可扩展性的强大体现。详细的步骤如下： 1. 菜单栏：Tools -&amp;gt; New Plugin...  2. 此时会打开一个插件模版文件，使用下面的内容覆盖">
     
         <link rel="alternate" type="application/atom+xml" title="Life is like hiking" href="/atom.xml">
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.14">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
@@ -182,9 +175,9 @@
 
 2. 此时会打开一个插件模版文件，使用下面的内容覆盖
 </code></pre><a id="more"></a>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">import datetime, getpass</div><div class="line">import sublime, sublime_plugin</div><div class="line">import datetime</div><div class="line"></div><div class="line">class AddDateTimeStampCommand(sublime_plugin.TextCommand):</div><div class="line">    def run(self, edit):</div><div class="line">        self.view.run_command("insert_snippet",</div><div class="line">            &#123;</div><div class="line">                # "contents": "%s" % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S %A")</div><div class="line">                # 可根据自己的需要进行调整（参照后面的日期时间格式）</div><div class="line">                "contents": "/**""\n"</div><div class="line">                " * ""\n"</div><div class="line">                " * @author:      author""\n"</div><div class="line">                " * @dateTime:    "  "%s"  %datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") +"\n"</div><div class="line">                " * @description: ""\n"</div><div class="line">                " */"</div><div class="line">            &#125;</div><div class="line">        )</div><div class="line">```        </div><div class="line">    3. ctrl+s保存文件，输入文件名 add_date.py，可以随便定义，然后确认一下保存的位置是 Packages/User/add_date.py</div><div class="line"></div><div class="line">    4. 绑定快捷键，在菜单栏：Preferences -&gt; Key Bindings -&gt; User，使用下面的内容覆盖</div><div class="line">```python</div><div class="line">[</div><div class="line">    &#123;"keys": ["ctrl+shift+f5"], "command": "add_date_time_stamp" &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> datetime, getpass</div><div class="line"><span class="keyword">import</span> sublime, sublime_plugin</div><div class="line"><span class="keyword">import</span> datetime</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">AddDateTimeStampCommand</span><span class="params">(sublime_plugin.TextCommand)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self, edit)</span>:</span></div><div class="line">        self.view.run_command(<span class="string">"insert_snippet"</span>,</div><div class="line">            &#123;</div><div class="line">                <span class="comment"># "contents": "%s" % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S %A")</span></div><div class="line">                <span class="comment"># 可根据自己的需要进行调整（参照后面的日期时间格式）</span></div><div class="line">                <span class="string">"contents"</span>: <span class="string">"/**"</span><span class="string">"\n"</span></div><div class="line">                <span class="string">" * "</span><span class="string">"\n"</span></div><div class="line">                <span class="string">" * @author:      author"</span><span class="string">"\n"</span></div><div class="line">                <span class="string">" * @dateTime:    "</span>  <span class="string">"%s"</span>  %datetime.datetime.now().strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>) +<span class="string">"\n"</span></div><div class="line">                <span class="string">" * @description: "</span><span class="string">"\n"</span></div><div class="line">                <span class="string">" */"</span></div><div class="line">            &#125;</div><div class="line">        )</div><div class="line">```        </div><div class="line">    <span class="number">3.</span> ctrl+s保存文件，输入文件名 add_date.py，可以随便定义，然后确认一下保存的位置是 Packages/User/add_date.py</div><div class="line"></div><div class="line">    4. 绑定快捷键，在菜单栏：Preferences -&gt; Key Bindings -&gt; User，使用下面的内容覆盖</div><div class="line">```python</div><div class="line">[</div><div class="line">    &#123;<span class="string">"keys"</span>: [<span class="string">"ctrl+shift+f5"</span>], <span class="string">"command"</span>: <span class="string">"add_date_time_stamp"</span> &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
 <pre><code>5. 保存上一步的快捷键设置，在需要插入的地方使用快捷键试试吧！效果如下：
-</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> *</div><div class="line"> * @author:      author</div><div class="line"> * @dateTime:    2015-08-12 11:42:34</div><div class="line"> * @description:</div><div class="line"> */</div><div class="line"> class Demo &#123;</div><div class="line"> </div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> *</div><div class="line"> * @author:      author</div><div class="line"> * @dateTime:    <span class="number">2015</span><span class="number">-08</span><span class="number">-12</span> <span class="number">11</span>:<span class="number">42</span>:<span class="number">34</span></div><div class="line"> * @description:</div><div class="line"> */</div><div class="line"> class Demo &#123;</div><div class="line"> </div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 <p>附录（strftime的格式）：</p>
 <p>%a 星期简称</p>
 <p>%A 星期全称</p>
@@ -413,7 +406,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuUlEQVR42u3aQVLDMAwFUO5/6TLDCgZI/7fstIuXVQfaxM8LyZH08RFfj6/r++fr6/oO1/dJ/rv5wsPDw1taevKw399PNiKntuuJtgAPDw/vGK9d6PUWXG9EsgW7Ng4PDw/vtbwkYSSwa3CePPDw8PDen9cWF5IjeLJNeHh4eO/J2/byv3TP5Jh+vNaCh4eH161nsRDwqs/H+3t4eHh4S131SUssKUYkheDJavHw8PBO8PJiQfTaXy5l0mYrEgYeHh7eVl7+ep+H+DyFTEoPUasMDw8P7xivHR2YtPzboN+mseIwjYeHh7fEa2uh+fE6eUx7gN5GwsPDwxvw2sGp5FicLLdNGPlq/8h7eHh4eFt5ec0zGSPIG2N58TdnPHkKHh4e3ibepByQj2QlCaAtGUdHeTw8PLwDvLVbtCkhD/e7irl4eHh453i7Bq3yEF+c8ZfKuz/+goeHh3eAlxdbkxs9lq5J+QMPDw/vft7ewJ3vaD7mlX8n6u/h4eHhjXn3THLl6WEyzoWHh4d3P2+txZUUgvOwXre11rIfHh4e3oA3gbUdtuuBgOt7tqUKPDw8vHO8fGigHQtoE0Z7NC/KJXh4eHgHeElQToL7WpMsD/2T4i8eHh7eLl4S7tsAvXdr1o7af7wx4OHh4W3i5QWISShfG5matOXw8PDwTvMmQXytVdaOCDziK3oAHh4e3piXB+u1Uaq10D8f8MLDw8O7n3d907Z4sZZgElhRjMDDw8Mb8x7lNe8r7f3Vk7vh4eHhHeC1A09tIkkWPR8Ca4/deHh4eHPeWjJoCxNt+G6bak9aX3h4eHgHeJNksLcYsZbB8PDw8N6Zl/+2DeWT9tu/68HDw8N7KW+eKtaO5nk3Dw8PD+9OXhvK2wcnWzYp/kZnbTw8PLxNvHkDbFeRom2AbRgawMPDw+ue9QkfsYi9MGLxwwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://hikings.github.io/2017/09/22/2017-09-22_Sublime_Text_3_insert_date/" alt="微信分享二维码">
 </div>
 
 
@@ -426,7 +419,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+<script src="/js/main.min.js?v=1.6.14"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -446,7 +439,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 </li>
 </template>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+<script src="/js/search.min.js?v=1.6.14" async></script>
 
 
 

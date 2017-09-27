@@ -19,14 +19,16 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="Python,Centos">
+    <meta name="keywords" content="Centos,Python">
     <meta name="description" content="python27">
+<meta name="keywords" content="Centos,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Install python27 on centos6">
 <meta property="og:url" content="http://hikings.github.io/2016/10/07/2016-10-15-Install_python27_centos/index.html">
 <meta property="og:site_name" content="Life is like hiking">
 <meta property="og:description" content="python27">
-<meta property="og:updated_time" content="2017-09-22T16:29:56.000Z">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-27T15:04:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Install python27 on centos6">
 <meta name="twitter:description" content="python27">
@@ -34,7 +36,7 @@
         <link rel="alternate" type="application/atom+xml" title="Life is like hiking" href="/atom.xml">
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.14">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
@@ -150,7 +152,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#python-V"><span class="post-toc-text">python -V</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#yum-list"><span class="post-toc-text">yum list</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#DUSE-SSL-I-SSL-include-I-SSL-include-openssl"><span class="post-toc-text">-DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#L-SSL-lib-lssl-lcrypto"><span class="post-toc-text">-L$(SSL)/lib -lssl -lcrypto</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vi-usr-bin-yum"><span class="post-toc-text">vi /usr/bin/yum</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装步骤如下："><span class="post-toc-text">安装步骤如下：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Centos-6-4-安装Python-2-7-python-pip"><span class="post-toc-text">Centos 6.4 安装Python 2.7 python-pip</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#准备工作"><span class="post-toc-text">准备工作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编译安装"><span class="post-toc-text">编译安装</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -175,57 +177,38 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>在工作环境中使用的是python 2.7.*，但是CentOS 6.4中默认使用的python版本是2.6.6，故需要升级版本。<br><a id="more"></a><br>安装步骤如下：</p>
-<p>1,先安装GCC，用如下命令yum install gcc gcc-c++</p>
-<p>2,下载python-2.7.5.tar.gz文件，修改文件权限chmode +x python-7.5.tar.gz</p>
-<p>3,解压tar文件，tar -xzvf python-2.7.5.tar.gz</p>
-<p>4,cd python-2.7.5</p>
+            <p>在工作环境中使用的是python 2.7.*，但是CentOS 6.4中默认使用的python版本是2.6.6，故需要升级版本。<br><a id="more"></a></p>
+<h2 id="安装步骤如下："><a href="#安装步骤如下：" class="headerlink" title="安装步骤如下："></a>安装步骤如下：</h2><p>1 先安装GCC，用如下命令yum install gcc gcc-c++</p>
+<p>2 下载python-2.7.5.tar.gz文件，修改文件权限chmode +x python-7.5.tar.gz</p>
+<p>3 解压tar文件，tar -xzvf python-2.7.5.tar.gz</p>
+<p>4 cd python-2.7.5</p>
 <p>./configure –prefix=/usr/local/python27 ### 注意：安装在新目录，防止覆盖系统默认安装的python</p>
 <p>make &amp;&amp; make install</p>
 <p>5、建立软连接，使系统默认的python指向python27</p>
 <p>mv /usr/bin/python /usr/bin/python2.6.6.old</p>
 <p>ln -s /usr/local/bin/python27 /usr/bin/python</p>
-<p>已经安装完成python的安装或升级的全部操作了，我们再来看一下现在的python的版本：</p>
-<h1 id="python-V"><a href="#python-V" class="headerlink" title="python -V"></a>python -V</h1><p>Python 2.7.5</p>
+<p> 已经安装完成python的安装或升级的全部操作了，我们再来看一下现在的python的版本：</p>
+<figure class="highlight python"><figcaption><span>-V```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">```Python <span class="number">2.7</span><span class="number">.5</span></div></pre></td></tr></table></figure>
 <p>虽然现在python已经安装完成，但是使用yum命令会有问题——yum不能正常工作：</p>
-<h1 id="yum-list"><a href="#yum-list" class="headerlink" title="yum list"></a>yum list</h1><p>There was a problem importing one of the Python modules</p>
-<p>required to run yum. The error leading to this problem was:</p>
-<p>No module named yum</p>
-<p>Please install a package which provides this module, or</p>
-<p>verify that the module is installed correctly.</p>
-<p>It’s possible that the above module doesn’t match the</p>
-<p>current version of Python</p>
-<p>这是因为yum默认使用的python版本是2.6.6，到哪是现在的python版本是2.7.5，故会出现上述问题，只需要该一下yum的默认python配置版本就行了：</p>
-<p>#vi /usr/bin/yum</p>
+<figure class="highlight plain"><figcaption><span>yum list```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">There was a problem importing one of the Python modules</div><div class="line"></div><div class="line">required to run yum. The error leading to this problem was:</div><div class="line"></div><div class="line">No module named yum</div><div class="line"></div><div class="line">Please install a package which provides this module  or</div><div class="line"></div><div class="line">verify that the module is installed correctly.</div><div class="line"></div><div class="line">It&apos;s possible that the above module doesn&apos;t match the</div><div class="line"></div><div class="line">current version of Python</div><div class="line"></div><div class="line">这是因为yum默认使用的python版本是2.6.6，到哪是现在的python版本是2.7.5，故会出现上述问题，只需要该一下yum的默认python配置版本就行了：</div><div class="line"></div><div class="line">```#vi /usr/bin/yum</div></pre></td></tr></table></figure>
 <p>将文件头部的#!/usr/bin/python改为</p>
-<p>#!/usr/bin/python2.6</p>
-<p><a href="https://pypi.python.org/pypi/setuptools" target="_blank" rel="external">https://pypi.python.org/pypi/setuptools</a><br>wget <a href="https://bootstrap.pypa.io/ez_setup.py" target="_blank" rel="external">https://bootstrap.pypa.io/ez_setup.py</a> -O - | python</p>
-<!--more-->
-<p>Centos 6.4 安装Python 2.7 python-pip</p>
-<ol>
-<li>准备工作</li>
-</ol>
-<p>下载源码包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python2.6</div><div class="line">https://pypi.python.org/pypi/setuptools</div><div class="line">wget https://bootstrap.pypa.io/ez_setup.py -O - | python</div></pre></td></tr></table></figure>
+<h2 id="Centos-6-4-安装Python-2-7-python-pip"><a href="#Centos-6-4-安装Python-2-7-python-pip" class="headerlink" title="Centos 6.4 安装Python 2.7 python-pip"></a>Centos 6.4 安装Python 2.7 python-pip</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>下载源码包</p>
 <p>wget <a href="http://python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2" target="_blank" rel="external">http://python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2</a><br>查看是否安装make工具</p>
 <p>~#rpm -qa|grep make<br>automake-1.11.1-4.el6.noarch<br>make-3.81-20.el6.x86_64<br>如果没有安装make工具</p>
 <p>yum -y install gcc automake autoconf libtool make<br>查看是否安装zlib库</p>
 <p>~#rpm -qa|grep zlib<br>zlib-devel-1.2.3-29.el6.x86_64<br>zlib-1.2.3-29.el6.x86_64<br>安装zlib</p>
 <p>yum install zlib-devel<br>检查是否安装ssl 库</p>
-<p>复制代码<br>~#rpm -qa|grep openssl<br>openssl-devel-1.0.1e-16.el6_5.x86_64<br>openssl-static-1.0.1e-16.el6_5.x86_64<br>openssl098e-0.9.8e-17.el6.centos.2.x86_64<br>openssl-1.0.1e-16.el6_5.x86_64<br>openssl-perl-1.0.1e-16.el6_5.x86_64<br>复制代码<br>安装openssl</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">~#rpm -qa|grep openssl</div><div class="line">openssl-devel-1.0.1e-16.el6_5.x86_64</div><div class="line">openssl-static-1.0.1e-16.el6_5.x86_64</div><div class="line">openssl098e-0.9.8e-17.el6.centos.2.x86_64</div><div class="line">openssl-1.0.1e-16.el6_5.x86_64</div><div class="line">openssl-perl-1.0.1e-16.el6_5.x86_64</div></pre></td></tr></table></figure>
+<p>安装openssl</p>
 <p>yum install openssl*<br>安装bzip2依赖库</p>
 <p>yum install -y bzip2*</p>
-<ol>
-<li>编译安装</li>
-</ol>
-<p>cp Python-2.7.3.tar.bz2 /usr/src/<br>tar -jxvf Python-2.7.3.tar.bz2<br>vi Modules/Setup.dist<br> 找到   </p>
-<p>复制代码</p>
-<p>#SSL=/usr/local/ssl</p>
-<p>#_ssl _ssl.c \</p>
-<h1 id="DUSE-SSL-I-SSL-include-I-SSL-include-openssl"><a href="#DUSE-SSL-I-SSL-include-I-SSL-include-openssl" class="headerlink" title="-DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \"></a>-DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \</h1><h1 id="L-SSL-lib-lssl-lcrypto"><a href="#L-SSL-lib-lssl-lcrypto" class="headerlink" title="-L$(SSL)/lib -lssl -lcrypto"></a>-L$(SSL)/lib -lssl -lcrypto</h1><p>……</p>
-<p>#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz<br>复制代码<br> 把注释去掉</p>
+<h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><p>cp Python-2.7.3.tar.bz2 /usr/src/<br>tar -jxvf Python-2.7.3.tar.bz2<br>vi Modules/Setup.dist<br> 找到   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#SSL=/usr/local/ssl</div><div class="line">#_ssl _ssl.c \</div><div class="line">#       -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \</div><div class="line">#       -L$(SSL)/lib -lssl -lcrypto</div><div class="line">......</div><div class="line">#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz</div></pre></td></tr></table></figure>
+<p> 把注释去掉</p>
 <p> 编译</p>
 <p>./configure –prefix=/usr/local/python2.7<br>make all<br>make install<br>make clean<br>make distclean<br> 安装成功</p>
-<p>~#/usr/local/python2.7/bin/python2.7<br>Python 2.7.3 (default, Dec 18 2013, 15:43:35)<br>[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2<br>Type “help”, “copyright”, “credits” or “license” for more information.</p>
+<p>~#/usr/local/python2.7/bin/python2.7<br>Python 2.7.3 (default  Dec 18 2013  15:43:35)<br>[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2<br>Type “help”  “copyright”  “credits” or “license” for more information.</p>
 <blockquote>
 <blockquote>
 <blockquote>
@@ -237,28 +220,25 @@
 <ol>
 <li>解决yum无法使用的问题</li>
 </ol>
-<p>复制代码<br>~#yum update<br>There was a problem importing one of the Python modules<br>required to run yum. The error leading to this problem was:</p>
-<p>   No module named yum</p>
-<p>Please install a package which provides this module, or<br>verify that the module is installed correctly.</p>
-<p>It’s possible that the above module doesn’t match the<br>current version of Python, which is:<br>2.7.3 (default, Dec 18 2013, 15:43:35)<br>[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]</p>
-<p>If you cannot solve this problem yourself, please go to<br>the yum faq at:<br>  <a href="http://yum.baseurl.org/wiki/Faq" target="_blank" rel="external">http://yum.baseurl.org/wiki/Faq</a><br>复制代码<br>因为centos 6.4 下yum默认使用的是python2.6</p>
-<p>复制代码</p>
-<h2 id="vi-usr-bin-yum"><a href="#vi-usr-bin-yum" class="headerlink" title="vi /usr/bin/yum"></a>vi /usr/bin/yum</h2><p>#!/usr/bin/python<br>import sys<br>try:<br>    import yum<br>except ImportError:<br>…….<br>复制代码<br>修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">~#yum update</div><div class="line">There was a problem importing one of the Python modules</div><div class="line">required to run yum. The error leading to this problem was:</div><div class="line"></div><div class="line">   No module named yum</div><div class="line"></div><div class="line">Please install a package which provides this module  or</div><div class="line">verify that the module is installed correctly.</div><div class="line"></div><div class="line">It&apos;s possible that the above module doesn&apos;t match the</div><div class="line">current version of Python  which is:</div><div class="line">2.7.3 (default  Dec 18 2013  15:43:35) </div><div class="line">[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]</div><div class="line"></div><div class="line">If you cannot solve this problem yourself  please go to </div><div class="line">the yum faq at:</div><div class="line">  http://yum.baseurl.org/wiki/Faq</div></pre></td></tr></table></figure>
+<p>因为centos 6.4 下yum默认使用的是python2.6</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">vi /usr/bin/yum</div><div class="line">----------------------------------------------------</div><div class="line">#!/usr/bin/python</div><div class="line">import sys</div><div class="line">try:</div><div class="line">    import yum</div><div class="line">except ImportError:</div><div class="line">.......</div></pre></td></tr></table></figure>
+<p>修改为</p>
 <p>#!/usr/bin/python2.6<br>……..</p>
 <ol>
 <li>安装python-pip工具</li>
 </ol>
 <p>先安装setup-tools</p>
-<p>wget <a href="https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg" target="_blank" rel="external">https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg</a>  –no-check-certificate<br>chmod +x setuptools-0.6c11-py2.7.egg<br>sh setuptools-0.6c11-py2.7.egg<br>安装pip</p>
-<p>复制代码<br>wget <a href="https://pypi.python.org/packages/source/p/pip/pip-1.3.1.tar.gz" target="_blank" rel="external">https://pypi.python.org/packages/source/p/pip/pip-1.3.1.tar.gz</a> –no-check-certificate<br>cp pip-1.3.1.tar.gz /usr/src/<br>tar zxvf pip-1.3.1.tar.gz<br>cd pip-1.3.1<br>python setup.py install<br>ln -s /usr/local/python2.7/bin/pip /usr/bin/pip<br>复制代码</p>
-
+<p>wget <a href="https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg" target="_blank" rel="external">https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg</a>  –no-check-certificate<br>chmod +x setuptools-0.6c11-py2.7.egg<br>sh setuptools-0.6c11-py2.7.egg</p>
+<p>安装pip</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">wget https://pypi.python.org/packages/source/p/pip/pip-1.3.1.tar.gz --no-check-certificate</div><div class="line">cp pip-1.3.1.tar.gz /usr/src/</div><div class="line">tar zxvf pip-1.3.1.tar.gz</div><div class="line">cd pip-1.3.1</div><div class="line">python setup.py install</div><div class="line">ln -s /usr/local/python2.7/bin/pip /usr/bin/pip</div></pre></td></tr></table></figure>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-09-22T16:29:56.000Z" itemprop="dateUpdated">9月 23 2017 00:29:56</time>
+    最后更新时间：<time datetime="2017-09-27T15:04:58.000Z" itemprop="dateUpdated">9月 27 2017 23:04:58</time>
 </span><br>
 
 
@@ -447,7 +427,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACrElEQVR42u3aQW7jQAwEQP//095rgI2kJjnMeoPSKXAcZWoMaOgmX6/4en+5/n7l6krudv9X+T1HFx4eHt5g6Ve3u/rHOf7qb69eub9PYVvx8PDw1nhXt75/T/5k7h0/1fXg4eHhfTLv/vDIF1ot4vHw8PD+L959aZuU6Xh4eHi/iZcsqBeqJkt8x9di1oKHh4fX6UwdWOLP/LzS38PDw8Mbd9WTB271IV4dRxitFg8PD2+B1xsdODUslUcSk1YZHh4e3h7vVEDQ27IcUx7hwsPDwzvKm7SXeoMF1e2rltTN5eLh4eEVe0N5udxrjL1bV146lz9DPDw8vAHvPg7Iw4KzYUS1BMfDw8P7BN7PhLBnwd/8jIeHh7fAq97o4Wt/awIqKZ3vS//8Dnh4eHhzXv4vJ/FEHnxUqeXPCg8PD2/MO9XWmowgvMbXaDICDw8P7xCvt5Tk4V6NZeebi4eHh3eW1yuU84dydZvywa+oSYaHh4e3zKsut3qoJA/6eUSCh4eHt83Lj4Fe/JpHsdVgIjk28PDw8DZ492+qtpomB0Bv6OphtXh4eHgLvOTxPRnJ6h0wx048PDw8vDXeKCodhAu9BtiB0hwPDw9vwMsD3Gqbqlp85yMFhdYaHh4e3gIvL5ero1S9llUe++YbgYeHh7fB65XL5Tg1WFCv4H44GPDw8PDWePmjPA9Pq8dML4Z4eB0PDw9vjXfsdsUgIymjJ40xPDw8vLO8d/HKY4L7Yj0n5QMK39wBDw8Pb4HXa1n1SuR83CrZlAMkPDw8vAEvb01Vf9srlxdjXDw8PLyFBlgSHOyFuafGufDw8PA+k7cRKEzGCB6myfDw8PD+KW/e+K/GFr0twMPDw9vmTcKIXiTR26BqhIGHh4e3wat+yZ+EFNWFzrcGDw8P7yjvDyHsHSkpwM+MAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://hikings.github.io/2016/10/07/2016-10-15-Install_python27_centos/" alt="微信分享二维码">
 </div>
 
 
@@ -460,7 +440,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+<script src="/js/main.min.js?v=1.6.14"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -480,7 +460,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 </li>
 </template>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+<script src="/js/search.min.js?v=1.6.14" async></script>
 
 
 
